@@ -13,7 +13,7 @@ Therefore, we are more interested in your ability to build some of the stuff you
 
 ## Setting up
 
-The file `punctuality.rb` has instructions on how to get the server running. Note that we don't expect you to have used Ruby before, and you won't be writing any Ruby code as part of this challenge, though you will probably have to read a little bit.
+The file `punctuality.rb` has instructions on how to get the server running. Note that we don't expect you to have used [Ruby](https://www.ruby-lang.org/en/) before today. For this task you'll just need to install it and run a simple program, not write any new code in it.
 
 If you get stuck getting the server running, try Googling the error message, but feel free to email us if you hit a roadblock. Troubleshooting your errors, and knowing when to ask for help, are equally useful skills.
 
@@ -28,7 +28,7 @@ Once your server is set up, you should be able to visit it through a browser and
 - Pagination ("Show [25] shifts" / "Showing 1 to 5 of 5 shifts")
 - Summary of times, through textual summary ("Mike is punctual 80% of the time"), chart, and summary of results ("punctual: 8, left early: 2")
 
-Please build at least 3 of these features. It's your choice as to which 3, but at least some of your code should talk to the server you set up prior (it'd be pretty hard to make anything useful otherwise!).
+Your task is to build at least 3 of these features. It's your choice as to which 3, but at least some of your code should talk to the server you set up prior (it'd be pretty hard to make anything useful otherwise!).
 
 We use the following general purpose frameworks/libraries at Tanda. Feel free to use any of these in your task. We'd prefer if you didn't introduce any new ones:
 
@@ -38,8 +38,8 @@ We use the following general purpose frameworks/libraries at Tanda. Feel free to
 - d3.js
 - QUnit (other test frameworks are okay)
 
-You're welcome to build more than 3 features, but won't be penalised for not doing so. We're more interested in what your code looks like, then how much of it you write.
+You're welcome to build more than 3 features, but won't be penalised for not doing so. We're more interested in what your code looks like than how much of it you write.
 
 ## Submitting your code
 
-You're welcome to structure your code however you like. Please package in some sort of compressed archive format - zip is fine. In the archive please include everything we sent you, including the server code.
+Your code will probably be a HTML file, some JavaScript files, and some CSS files. Please package those alongside the files we've given you (this file, the Ruby server, etc) in a zip archive and email that to us. If you were emailed this task, just reply to whoever emailed it to you. Otherwise send it to developers@tanda.co
