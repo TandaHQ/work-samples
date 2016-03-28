@@ -30,7 +30,7 @@ Once your server is set up, you should be able to visit it through a browser and
 
 Please build at least 3 of these features. It's your choice as to which 3, but at least some of your code should talk to the server you set up prior (it'd be pretty hard to make anything useful otherwise!).
 
-Please don't use 3rd party code apart from utility libraries like jQuery (or equivalents), Underscore, or Lodash. We recognise that this makes the task a bit more laborious, but we are interested in seeing your ability to write meaningful amounts of code, not glue libraries together. (Consider a hint as to the sort of work you'll be doing at Tanda.) If you'd like to write tests, we use QUnit, but feel free to use another framework if you have a preference.
+Please don't use 3rd party code apart from utility libraries like jQuery (or equivalents), Underscore, Lodash, or Bootstrap. We recognise that this makes the task a bit more laborious, but we are interested in seeing your ability to write meaningful amounts of code, not glue libraries together. (Consider a hint as to the sort of work you'll be doing at Tanda.) If you'd like to write tests, we use QUnit, but feel free to use another framework if you have a preference.
 
 You're welcome to build more than 3 features, but won't be penalised for not doing so. We're more interested in what your code looks like, then how much of it you write.
 

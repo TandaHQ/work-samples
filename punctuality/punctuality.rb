@@ -15,7 +15,7 @@
 # * Listening on tcp://localhost:4567
 # == Sinatra (v1.4.7) has taken the stage on 4567 for development
 #
-# Test that it's working by going to http://localhost:4567/shift/2013-09-15
+# Test that it's working by going to http://localhost:4567/ (the port number is from the Sinatra output just above)
 # Read the code to see other URLs you can access. Look at the data files for valid data ranges.
 # 
 # If you come across issues getting this code to run, please document the issues and how you fixed them - we'd love
@@ -25,6 +25,10 @@ require 'sinatra'
 require 'date'
 require 'csv'
 require 'json'
+
+get '/' do
+  erb :index
+end
 
 get '/roster/:date' do |date|
   content_type :json
@@ -44,6 +48,10 @@ end
 get '/shifts/:from/:to' do |from, to|
   content_type :json
   clockin_data_for_dates(from, to)
+end
+
+not_found do
+  erb :not_found
 end
 
 def clockin_data_for_dates(from, to)
