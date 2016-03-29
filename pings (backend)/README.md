@@ -29,7 +29,7 @@ For example, for device ID `eab88fbc-10c6-11e2-b622-1231381359d0`, to record a p
 
 You can use any method you like for storing the underlying data, and we'll be interested to hear your thoughts on what you chose.
 
-**Retrieving data**
+**Retrieving data for a specific device**
 
 The server should accept GET requests to query ping times for specific device IDs, or for `all` device IDs. This should work in two formats: `/deviceID/:date` or `/deviceID/:from/:to`.
 
@@ -41,6 +41,24 @@ The server should accept GET requests to query ping times for specific device ID
 * `/:deviceId/1456012800/2016-02-24`
 * `/:deviceId/2016-02-21/1456272000`
 * `/:deviceId/1456012800/1456272000`
+
+All of these requests would return a list of unix timestamps, one for each ping. For example:
+
+```
+[
+  1459209638,
+  1459209941,
+  1459210248,
+  1459210552,
+  1459210856,
+  1459211159,
+  1459211463,
+  1459211768,
+  1459212071
+]
+```
+
+**Retrieving data for all devices**
 
 Finally, replacing the `device_id` parameter with the string `all` should return data for all device IDs, formatted as a hash.
 
@@ -60,6 +78,17 @@ Finally, replacing the `device_id` parameter with the string `all` should return
 ```
 
 `/all/:date` should also be supported.
+
+**Retrieving a list of devices**
+
+GET `/devices` should return a list of device IDs:
+
+```
+[
+  'eab88fbc10c611e2b6221231381359d0',
+  '3576626dfb9d4e4ca2133c9221192b38'
+]
+```
 
 **Deleting data**
 
