@@ -1,11 +1,11 @@
 Punctuality
 =================================
 
-This task is a challenge for front-end focused developers.
+This task is a challenge for front end engineers and developers.
 
 Included in this package is a small Ruby web server, which returns data about rosters and shifts for a fictional person. Your task is to design and build a small widget that shows information about this person's punctuality.
 
-This is a feature that already exists in Tanda; it looks like this:
+This is a feature that already exists in Tanda. Managers love it because it makes it easy to spot and reward high performing staff. Employees love it, because punctuality is so crucial in many industries we work with, and it makes it easy for them to track their progress. The feature as we have it looks like this:
 
 ![The current punctuality module](example.gif)
 
