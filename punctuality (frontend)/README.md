@@ -26,6 +26,7 @@ Once your server is set up, you should be able to visit it through a browser and
 - Hover over actual time comment to see what the actual time was
 - Date picker ("This Pay Period", also allows custom date selection)
 - Pagination ("Show [25] shifts" / "Showing 1 to 5 of 5 shifts")
+- Handling of shifts/rosters with some times missing (just indicate that in the UI, "no finish time clocked")
 - Summary of times, through textual summary ("Mike is punctual 80% of the time"), chart, and summary of results ("punctual: 8, left early: 2")
 
 Your task is to build at least 3 of these features. It's your choice as to which 3, but at least some of your code should talk to the server you set up prior (it'd be pretty hard to make anything useful otherwise!).
