@@ -21,7 +21,13 @@
 # If you come across issues getting this code to run, please document the issues and how you fixed them - we'd love
 # to see your thought process (and also fix it for others in future!)
 
-require 'sinatra'
+begin
+  require 'sinatra'
+rescue LoadError => e
+  puts "You need to install the `sinatra` gem before you can run this server. There's instructions inside the server file - please take a look."
+  exit(1)
+end
+
 require 'date'
 require 'csv'
 require 'json'
