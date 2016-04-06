@@ -19,17 +19,22 @@ If you get stuck getting the server running, try Googling the error message, but
 
 ## The challenge
 
-Once your server is set up, you should be able to visit it through a browser and see JSON data. Your next step is to start building the punctuality widget. The screenshot above includes quite a few features:
+Once your server is set up, you should be able to visit it through a browser and see JSON data. Your next step is to start building the punctuality widget. The screenshot above includes quite a few features, which we've split into simple and advanced:
+
+**Basic features**
 
 - Display rostered times for specific dates
 - Display if corresponding actual time was on time, or if there was an issue with it
 - Hover over actual time comment to see what the actual time was
+
+**Advanced features**
+
 - Date picker ("This Pay Period", also allows custom date selection)
 - Pagination ("Show [25] shifts" / "Showing 1 to 5 of 5 shifts")
 - Handling of shifts/rosters with some times missing (just indicate that in the UI, "no finish time clocked")
 - Summary of times, through textual summary ("Mike is punctual 80% of the time"), chart, and summary of results ("punctual: 8, left early: 2")
 
-Your task is to build at least 3 of these features. It's your choice as to which 3, but at least some of your code should talk to the server you set up prior (it'd be pretty hard to make anything useful otherwise!).
+Your task is to build the 3 basic features, and then at least 1 advanced feature (though we'd encourage you to try as many as you like!). You're also encouraged to write tests where appropriate.
 
 We use the following general purpose frameworks/libraries at Tanda. Feel free to use any of these in your task. We'd prefer if you didn't introduce any new ones:
 
