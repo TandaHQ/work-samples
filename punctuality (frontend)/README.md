@@ -9,7 +9,7 @@ This is a feature that already exists in Tanda. Managers love it because it make
 
 ![The current punctuality module](example.gif)
 
-Therefore, we are more interested in your ability to build some of the stuff you can see here. You're welcome to copy the design exactly and won't be penalised for doing so.
+We are interested in your ability to build the features in this gif. You can copy the design exactly, or you can make any changes you like to how it looks.
 
 ## Setting up
 
