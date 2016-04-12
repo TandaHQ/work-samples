@@ -1,5 +1,4 @@
-Pings
-=================================
+# Pings
 
 This task is a challenge for back end engineers and developers.
 
@@ -46,7 +45,7 @@ The server should accept GET requests to query ping times for specific device ID
 
 All of these requests would return a list of unix timestamps, one for each ping. For example:
 
-```
+```javascript
 [
   1459209638,
   1459209941,
@@ -62,9 +61,9 @@ All of these requests would return a list of unix timestamps, one for each ping.
 
 **Retrieving data for all devices**
 
-Finally, replacing the `device_id` parameter with the string `all` should return data for all device IDs, formatted as a hash.
+Finally, replacing the `device_id` parameter with the string `all` should return data for all device IDs, formatted as a hash. This should work for all the different requests mentioned above, including `/all/:date`, and `/all/:from/:to`.
 
-```
+```javascript
 {
   'eab88fbc-10c6-11e2-b622-1231381359d0': [
     1456050274,
@@ -79,16 +78,14 @@ Finally, replacing the `device_id` parameter with the string `all` should return
 }
 ```
 
-`/all/:date` should also be supported.
-
 **Retrieving a list of devices**
 
 GET `/devices` should return a list of device IDs:
 
-```
+```javascript
 [
-  'eab88fbc10c611e2b6221231381359d0',
-  '3576626dfb9d4e4ca2133c9221192b38'
+  'eab88fbc-10c6-11e2-b622-1231381359d0',
+  '5225a416-3394-4e9f-9d97-e371d7615197'
 ]
 ```
 
