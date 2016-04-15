@@ -11,6 +11,8 @@ This is a feature that already exists in Tanda. Managers love it because it make
 
 We are interested in your ability to build the features in this gif. You can copy the design exactly, or you can make any changes you like to how it looks.
 
+This challenge should take about one and a half to two hours to complete.
+
 ## Setting up
 
 The file `punctuality.rb` has instructions on how to get the server running. Note that we don't expect you to have used [Ruby](https://www.ruby-lang.org/en/) before today. For this task you'll just need to install it and run a simple program, not write any new code in it.

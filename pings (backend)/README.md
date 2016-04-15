@@ -10,6 +10,8 @@ This is a feature that already exists in Tanda. We have provided most of the exi
 
 You can write this server in any language you like.
 
+This challenge should take about one and a half to two hours to complete.
+
 ## Setting up
 
 We've provided a test file, `pings.rb`, which runs tests against your server. It should run smoothly if you have [Ruby](https://www.ruby-lang.org/en/) installed. You won't need to write any Ruby for this task, unless you want to also write your server in Ruby. If you do, please write it in a separate file, *not* in `pings.rb`. The only change you should make to `pings.rb` is to edit the first line with your server's local address.

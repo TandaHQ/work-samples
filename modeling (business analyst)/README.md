@@ -9,6 +9,8 @@ Two APIs we integrate heavily with are those for [MYOB](http://developer.myob.co
 
 Your challenge is to use information from MYOB and Xero's API documentation to design a data model in Tanda.
 
+This challenge should take about one and a half to two hours to complete.
+
 ## Setting up
 
 To start, have a look at MYOB and Xero's documentation for the Employee API endpoint:
