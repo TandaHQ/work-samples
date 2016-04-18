@@ -44,6 +44,7 @@ We use the following general purpose frameworks/libraries at Tanda. Feel free to
 - Underscore (Lodash is also okay)
 - Bootstrap
 - d3.js
+- moment.js (and related plugins)
 - QUnit (other test frameworks are okay)
 
 You're welcome to build more than 3 features, but won't be penalised for not doing so. We're more interested in what your code looks like than how much of it you write.
