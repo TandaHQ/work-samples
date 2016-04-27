@@ -30,7 +30,7 @@ The server should accept POST requests that contain a `device_id` and an `epoch_
 
 For example, for device ID `eab88fbc-10c6-11e2-b622-1231381359d0`, to record a ping at `2016-02-24 12:52:44 +1000` you'd make a POST to `/eab88fbc-10c6-11e2-b622-1231381359d0/1456282364`.
 
-You can use any method you like for storing the underlying data, and we'll be interested to hear your thoughts on what you chose.
+You can use any method you like for storing the underlying data, and we'll be interested to hear your thoughts on what you chose. Data persistence is important so in-memory-only solutions are not recommended.
 
 **Retrieving data for a specific device**
 
