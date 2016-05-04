@@ -8,6 +8,4 @@ Chances are you already know which challenge is right for you, but if not, a qui
 - **punctuality**: a challenge for front end web developers/engineers. Challenges include building modular functionality, AJAX, and working with designs.
 - **pings**: a challenge for back end developers/engineers. Challenges include building a simple and stable server, data storage, and responding to HTTP requests.
 
-For all these challenges, you'll need to install the [Ruby](https://www.ruby-lang.org/en/) programming language. But you won't need to write any Ruby (unless you want to). In fact, every challenge can be done in any language you like.
-
 Each challenge will have more information about how to complete the challenge, and how to submit them when you're done. If you get stuck at any stage, please ask! If you've been chatting to someone from Tanda, email them back, otherwise just send an email to developers@tanda.co and we'll be happy to help you out.
