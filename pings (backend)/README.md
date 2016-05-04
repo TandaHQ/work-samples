@@ -8,8 +8,6 @@ Your challenge is to build a small server that acts as an API for time clock pin
 
 This is a feature that already exists in Tanda. We have provided most of the existing server's API - your task is to write the underlying code.
 
-This challenge should take about one and a half to two hours to complete.
-
 ## Setting up
 
 For this challenge, you'll need to install the [Ruby](https://www.ruby-lang.org/en/) programming language. But you won't need to write any Ruby (unless you want to) - you can do this challenge in any language you like.

@@ -7,5 +7,6 @@ Chances are you already know which challenge is right for you, but if not, a qui
 
 - **punctuality**: a challenge for front end web developers/engineers. Challenges include building modular functionality, AJAX, and working with designs.
 - **pings**: a challenge for back end developers/engineers. Challenges include building a simple and stable server, data storage, and responding to HTTP requests.
+- **widget**: a challenge for designers and front end web developers. Challenges include designing a new dashboard widget based on existing data in Tanda.
 
 Each challenge will have more information about how to complete the challenge, and how to submit them when you're done. If you get stuck at any stage, please ask! If you've been chatting to someone from Tanda, email them back, otherwise just send an email to developers@tanda.co and we'll be happy to help you out.
