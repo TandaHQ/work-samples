@@ -21,7 +21,7 @@ Here's a few more things you should know about leave in Tanda. If you want to kn
 - We think the main things the widget should do are to show pending (unapproved) leave requests, to show who is on leave now, and to show who will be on leave soon. Feel free to add other functionality if you think it's important.
 - For extra credit, think about how the widget will look in an "empty" state (when there's no leave requests to display).
 
-[Tanda demo accounts](https://www.tanda.co/try) also include sample leave requests so you can get more of a feel of what's going on.
+[Tanda demo accounts](https://my.tanda.co/try/?utm_source=Github&utm_medium=challenge&utm_campaign=design-front-end) also include sample leave requests so you can get more of a feel of what's going on.
 
 ## The challenge
 
