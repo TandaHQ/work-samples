@@ -17,7 +17,7 @@ Your challenge is to mock up a new design for a leave dashboard widget. You can 
 Here's a few more things you should know about leave in Tanda. If you want to know something that isn't answered here, please ask us! Design is a two way street, so imagine us as the product manager, and ask any questions you normally would about why things are done in a certain way, or about what sort of stuff customers might want to see.
 
 - The dashboard is visible to business owners and managers. At the moment, all widgets are visible to all users (in future we may add the option to disable widgets selectively). So your new widget should be more targeted at those approving/reviewing leave, than those requesting it.
-- One of the core tenets of the dashboard's design is that it's read only - widgets should give a summary of what's going on, with deep links to the relevant page if something should be actioned. A secondary tenet is that the widget shouldn't be too cluttered - there's no point in including every bit of data we have in the system in such a small space.
+- One of the big ideas of the dashboard is it shows as much information as is needed for an overview - widgets should give a summary of what's going on, with deep links to the relevant page where appropriate. There's no point in including every bit of data we have in the system in such a small space.
 - We think the main things the widget should do are to show pending (unapproved) leave requests, to show who is on leave now, and to show who will be on leave soon. Feel free to add other functionality if you think it's important.
 - For extra credit, think about how the widget will look in an "empty" state (when there's no leave requests to display).
 
