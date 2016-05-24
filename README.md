@@ -5,6 +5,7 @@ Welcome to the Tanda Code Challenges! If you've been sent this link, it's becaus
 
 Chances are you already know which challenge is right for you, but if not, a quick summary:
 
+- **modeling**: a challenge for business analysts. Challenges include system design, process mapping, and working with APIs.
 - **punctuality**: a challenge for front end web developers/engineers. Challenges include building modular functionality, AJAX, and working with designs.
 - **pings**: a challenge for back end developers/engineers. Challenges include building a simple and stable server, data storage, and responding to HTTP requests.
 - **widget**: a challenge for designers and front end web developers. Challenges include designing a new dashboard widget based on existing data in Tanda.
