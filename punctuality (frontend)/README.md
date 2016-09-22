@@ -17,7 +17,7 @@ For this challenge, you'll need to install the [Ruby](https://www.ruby-lang.org/
 
 The file `punctuality.rb` has instructions on how to get the server running. Note that we don't expect you to have used [Ruby](https://www.ruby-lang.org/en/) before today. For this task you'll just need to install it and run a simple program, not write any new code in it.
 
-If you get stuck getting the server running, try Googling the error message, but feel free to email us if you hit a roadblock. Troubleshooting your errors, and knowing when to ask for help, are equally useful skills.
+If you get stuck getting the server running, try Googling the error message, but feel free to email us if you hit a roadblock.
 
 ## The challenge
 
@@ -36,9 +36,13 @@ Once your server is set up, you should be able to visit it through a browser and
 - Handling of shifts/rosters with some times missing (just indicate that in the UI, "no finish time clocked")
 - Summary of times, through textual summary ("Mike is punctual 80% of the time"), chart, and summary of results ("punctual: 8, left early: 2")
 
-Your task is to build the 3 basic features, and then at least 1 advanced feature (though we'd encourage you to try as many as you like!). You're also encouraged to write tests where appropriate.
+**Your task is to**:
 
-We use the following general purpose frameworks/libraries at Tanda. Feel free to use any of these in your task. We'd prefer if you didn't introduce any new ones:
+1) Build all basic features
+2) Build at least one advanced feature
+3) Add one new feature (something that doesn't exist in the gif)
+
+Feel free to use any of these libraries:
 
 - jQuery
 - Underscore (Lodash is also okay)
@@ -46,8 +50,6 @@ We use the following general purpose frameworks/libraries at Tanda. Feel free to
 - d3.js
 - moment.js (and related plugins)
 - QUnit (other test frameworks are okay)
-
-You're welcome to build more than 3 features, but won't be penalised for not doing so. We're more interested in what your code looks like than how much of it you write.
 
 ## Submitting your code
 

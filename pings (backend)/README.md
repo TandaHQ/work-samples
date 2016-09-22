@@ -18,9 +18,7 @@ Run the test file by running `ruby pings.rb`.
 
 ## The challenge
 
-Your challenge is to write a server that passes all the tests in `pings.rb`. The test file will step you through things that your server is able to do, but here's an overview:
-
-You're also welcome to add additional tests to `pings.rb` if you like, please mention this when submitting if you do.
+Your challenge is to write a server that passes all the tests in `pings.rb`, based on this API spec:
 
 **Storing data**
 
