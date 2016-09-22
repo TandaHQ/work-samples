@@ -29,14 +29,13 @@ You are welcome to submit a picture of a mockup, done using any tool you like. O
 
 This task is deliberately quite open ended. If you want more info about anything specific, send us your questions and we will get back to you as soon as we can.
 
-By the way, we use the following general purpose frameworks/libraries at Tanda. Feel free to use any of these in your task.
+Feel free to use any of these libraries in your task:
 
 - Bootstrap
 - jQuery
 - Underscore (Lodash is also okay)
 - d3.js
 - moment.js (and related plugins)
-- QUnit (other test frameworks are okay)
 
 ## Submitting your code
 
