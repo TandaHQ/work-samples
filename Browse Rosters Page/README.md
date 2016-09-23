@@ -2,12 +2,9 @@
 
 This task is a challenge for designers and front end web developers.
 
-[image of menu]
 ![Rosters Menu](rosters_menu.png)
 
 The **browse rosters** page is the landing page for rostering completed in Tanda. This page is used by managers who create and send out rosters to their staff, it lists rosters for the current week and 9 weeks onward. From this page managers can navigate to a specific weekly roster from the list, use the datepicker to jump to a different date or just send a roster out.
-
-[image of page]
 
 ![Current Browse Rosters Page](browse_rosters.png)
 
