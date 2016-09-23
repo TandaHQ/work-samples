@@ -1,7 +1,7 @@
 Tanda Code Challenges
 =================================
 
-Welcome to the Tanda Code Challenges! If you've been sent this link, it's because we are keen to see your programming skills in action. (If you've stumbled across this repo, we're also keen to see your programming skills in action - feel free to have a go at the challenges!)
+Welcome to the Tanda Code Challenges! If you've been sent this link, it's because we are keen to see your programming or design skills in action. (If you've stumbled across this repo, we're also keen to see your skills in action - feel free to have a go at the challenges!)
 
 Chances are you already know which challenge is right for you, but if not, a quick summary:
 
