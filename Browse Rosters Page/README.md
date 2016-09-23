@@ -1,41 +1,38 @@
-# Widget
+# Browse Rosters Page Redesign
 
 This task is a challenge for designers and front end web developers.
 
-The Tanda dashboard is the homepage that all users see when they first sign up, or log in, to the system. It contains a variety of widgets that link into different parts of the system, with the aim of giving customers an overview of how their staff are going, and if there's anything they need to get done. The dashboard can be configured to your liking, but the default view looks something like this:
+[image of menu]
+![Rosters Menu](rosters_menu.png)
 
-![Default dashboard](demo_dashboard.png)
+The **browse rosters** page is the landing page for rostering completed in Tanda. This page is used by managers who create and send out rosters to their staff, it lists rosters for the current week and 9 weeks onward. From this page managers can navigate to a specific weekly roster from the list, use the datepicker to jump to a different date or just send a roster out.
 
-As you can see, all information on the dashboard is provided in self contained widgets, each with a pretty specific focus. Your challenge is to design a new one!
+[image of page]
 
-One of the features of Tanda that the dashboard in the above screenshot doesn't touch on much is leave management - through Tanda, employees are able to request leave for upcoming holidays, or enter leave to be paid if they were off sick. Managers are able to approve or decline requests as well as looking at reports on leave history.
+![Current Browse Rosters Page](browse_rosters.png)
 
-Your challenge is to mock up a new design for a leave dashboard widget. You can submit just a picture of the mockup, but solutions that include complete HTML and CSS are better!
+This page is essentially a gateway that helps managers navigate to the roster they wish to view / edit. This is an important feature that should remain, but we think we can do more on this page in terms of its design, layout and the information we present.
 
-## More info
+## More Info
 
-Here's a few more things you should know about leave in Tanda. If you want to know something that isn't answered here, please ask us! Design is a two way street, so imagine us as the product manager, and ask any questions you normally would about why things are done in a certain way, or about what sort of stuff customers might want to see.
+Here's a few more things you should know about rostering in Tanda. If you want to know something that isn't answered here, **please ask us!** Design is a two way street, so imagine us as the product manager, and ask any questions you normally would about why things are done in a certain way, or about what sort of information managers might want to see.
 
-- The dashboard is visible to business owners and managers. At the moment, all widgets are visible to all users (in future we may add the option to disable widgets selectively). So your new widget should be more targeted at those approving/reviewing leave, than those requesting it.
-- One of the big ideas of the dashboard is it shows as much information as is needed for an overview - widgets should give a summary of what's going on, with deep links to the relevant page where appropriate. There's no point in including every bit of data we have in the system in such a small space.
-- We think the main things the widget should do are to show pending (unapproved) leave requests, to show who is on leave now, and to show who will be on leave soon. Feel free to add other functionality if you think it's important.
-- For extra credit, think about how the widget will look in an "empty" state (when there's no leave requests to display).
+- We display costs on each roster, this is a very important bit of information for managers as it lets them to make sure their roster costs aren’t going above budget.
+- The date picker to switch between months is often missed by users as it doesn’t stand out, also many of the links on the page don’t look distinctly like links which can cause problems
+- We currently list rosters 10 rosters on the page, these aren’t really organised by month and visually this makes it look less organised / harder to navigate
+- There are 3 links in the drop-down under the Rosters menu item. 1 is the browse page, and 2 are links to different views on a roster. Consider if this is the best way to structure the information, do we actually need dropdown links?
+
+![Example Roster Page](rosters_page.png)
 
 [Tanda demo accounts](https://my.tanda.co/try/?utm_source=Github&utm_medium=challenge&utm_campaign=design-front-end) also include sample leave requests so you can get more of a feel of what's going on.
 
 ## The challenge
 
-You are welcome to submit a picture of a mockup, done using any tool you like. Or you're welcome to submit a solution in HTML/CSS (with Javascript added if you like) - these are encouraged.
+Your challenge is to mock up a new design for the browse rosters page. You can submit just a picture of the mockup, but solutions that include complete HTML and CSS are better!
 
-This task is deliberately quite open ended. If you want more info about anything specific, send us your questions and we will get back to you as soon as we can.
+We want to see what you can come up with, don’t feel pressured to make your design look exactly like other pages in Tanda -  it's completely up to you. We want you to think about not only making the page look nice but also about making it useful for managers.
 
-Feel free to use any of these libraries in your task:
-
-- Bootstrap
-- jQuery
-- Underscore (Lodash is also okay)
-- d3.js
-- moment.js (and related plugins)
+Feel free to use a framework like Bootstrap to build your designs.
 
 ## Submitting your code
 
