@@ -15,9 +15,9 @@ This page is essentially a gateway that helps managers navigate to the roster th
 
 Here's a few more things you should know about rostering in Tanda. If you want to know something that isn't answered here, **please ask us!** Design is a two way street, so imagine us as the product manager, and ask any questions you normally would about why things are done in a certain way, or about what sort of information managers might want to see.
 
-- We display costs on each roster, this is a very important bit of information for managers as it lets them to make sure their roster costs aren’t going above budget.
-- The date picker to switch between months is often missed by users as it doesn’t stand out, also many of the links on the page don’t look distinctly like links which can cause problems
-- We currently list rosters 10 rosters on the page, these aren’t really organised by month and visually this makes it look less organised / harder to navigate
+- We display costs on each roster, this is a very important bit of information for managers as it lets them make sure their roster costs aren’t going above budget.
+- The date picker to switch between months is often missed by users as it doesn’t stand out, also many of the links on the page don’t look distinctly like links which can cause problems.
+- We currently list 10 rosters on the page, these aren’t really organised by month and visually this makes it look less organised / harder to navigate.
 - There are 3 links in the drop-down under the Rosters menu item. 1 is the browse page, and 2 are links to different views on a roster. Consider if this is the best way to structure the information, do we actually need dropdown links?
 
 ![Example Roster Page](rosters_page.png)
