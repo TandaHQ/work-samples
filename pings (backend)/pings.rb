@@ -1,4 +1,7 @@
 BASE_URL = "http://localhost:3000" # change this based on where your server is running locally
+
+# you shouldn't need to edit anything below here
+
 require 'json'
 require 'uri'
 require 'net/http'
