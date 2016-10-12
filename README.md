@@ -1,3 +1,5 @@
+> **Want to learn more about working at Tanda? Check out our [internships](http://careers.tanda.co/job/dev-internship/), or [careers.tanda.co](http://careers.tanda.co/)**!
+
 Tanda Code Challenges
 =================================
 
