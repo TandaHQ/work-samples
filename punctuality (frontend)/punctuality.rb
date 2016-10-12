@@ -75,8 +75,11 @@ def api_data_from_file(filename, from, to)
   data = CSV.parse(File.read("#{filename}.csv"), headers: true)
   range = from..(to + 1)
 
-  data.find_all {|row| range.cover?(Date.parse(row['date']))}
+  data.find_all {|row|
+    date = Date.strptime(row['date'], "%d/%m/%y") rescue Date.parse(row['date'])
+    date && range.cover?(date)}
+      .compact
       .sort_by {|row| row['date']}
-      .map {|row| {date: row['date'], start: row['start'], finish: row['finish']}}
+      .map {|row| {date: row['date'], start: row['start'], finish: row['finish'], type: row['type']}}
       .to_json
 end
