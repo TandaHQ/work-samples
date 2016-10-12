@@ -80,6 +80,6 @@ def api_data_from_file(filename, from, to)
     date && range.cover?(date)}
       .compact
       .sort_by {|row| row['date']}
-      .map {|row| {date: row['date'], start: row['start'], finish: row['finish'], type: row['type']}}
+      .map {|row| {date: row['date'], start: row['start'], finish: row['finish']}}
       .to_json
 end
