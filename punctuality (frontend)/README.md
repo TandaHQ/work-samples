@@ -38,9 +38,9 @@ Once your server is set up, you should be able to visit it through a browser and
 
 **Your task is to**:
 
-1) Build all basic features
-2) Build at least one advanced feature
-3) Add one new feature (something that doesn't exist in the gif)
+1. Build all basic features
+2. Build at least one advanced feature
+3. Add one new feature (something that doesn't exist in the gif)
 
 Feel free to use any of these libraries:
 
