@@ -10,9 +10,9 @@ This is a feature that already exists in Tanda. We have provided most of the exi
 
 ## Setting up
 
-For this challenge, you'll need to install the [Ruby](https://www.ruby-lang.org/en/) programming language. You can do this in any language you like. **For extra credit**, do it in a language you've never used before (and mention this when you submit it).
+To run the tests, you'll need to install [Ruby](https://www.ruby-lang.org/en/). You can submit your answer in any language you like. You are *strongly* encouraged to write it in a language you haven't used before, because 1) it'll make the challenge more fun for you, 2) it'll demonstrate to us how you pick up new tools.
 
-We've provided a test file, `pings.rb`, which runs tests against your server. It should run smoothly if you have [Ruby](https://www.ruby-lang.org/en/) installed. You won't need to write any Ruby for this task, unless you want to also write your server in Ruby. If you do, please write it in a separate file, *not* in `pings.rb`. The only change you should make to `pings.rb` is to edit the first line with your server's local address.
+We've provided a test file, `pings.rb`, which runs tests against your server. It should run smoothly once you have [Ruby](https://www.ruby-lang.org/en/) installed. The only change you should make to `pings.rb` is to edit the first line with your server's local address.
 
 Run the test file by running `ruby pings.rb`.
 
