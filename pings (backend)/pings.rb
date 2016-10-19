@@ -1,4 +1,4 @@
-BASE_URL = "http://127.0.0.1:8888" # change this based on where your server is running locally
+BASE_URL = "http://localhost:3000" # change this based on where your server is running locally
 HTTPS = false
 # you shouldn't need to edit anything below here
 
