@@ -1,9 +1,11 @@
-BASE_URL = "https://127.0.0.1:8888" # change this based on where your server is running locally
+BASE_URL = "http://127.0.0.1:8888" # change this based on where your server is running locally
+HTTPS = false
 # you shouldn't need to edit anything below here
 
 require 'json'
 require 'uri'
-require 'net/https'
+require 'net/https' if HTTPS
+require 'net/http' unless HTTPS
 require 'date'
 
 def run_tests!
@@ -73,8 +75,8 @@ end
 def post_request(device_id, epoch_time)
   uri = URI.parse(BASE_URL)
   http = Net::HTTP.new(uri.host, uri.port)
-  http.use_ssl = true
-  http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+  http.use_ssl = true if HTTPS
+  http.verify_mode = OpenSSL::SSL::VERIFY_NONE if HTTPS
   request = Net::HTTP::Post.new("/#{device_id}/#{epoch_time}")
   response = http.request(request)
   response.code == "200"
@@ -83,8 +85,8 @@ end
 def post_clear_data_request
   uri = URI.parse(BASE_URL)
   http = Net::HTTP.new(uri.host, uri.port)
-  http.use_ssl = true
-  http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+  http.use_ssl = true if HTTPS
+  http.verify_mode = OpenSSL::SSL::VERIFY_NONE if HTTPS
   request = Net::HTTP::Post.new("/clear_data")
   response = http.request(request)
   response.code == "200"
@@ -93,8 +95,8 @@ end
 def get_on_date(device_id, date)
   uri = URI.parse("#{BASE_URL}/#{device_id}/#{date}")
   http = Net::HTTP.new(uri.host, uri.port)
-  http.use_ssl = true
-  http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+  http.use_ssl = true if HTTPS
+  http.verify_mode = OpenSSL::SSL::VERIFY_NONE if HTTPS
   response = http.get(uri.request_uri)
   JSON.parse(response.body)
 end
@@ -102,8 +104,8 @@ end
 def get_on_dates(device_id, from, to)
   uri = URI.parse("#{BASE_URL}/#{device_id}/#{from}/#{to}")
   http = Net::HTTP.new(uri.host, uri.port)
-  http.use_ssl = true
-  http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+  http.use_ssl = true if HTTPS
+  http.verify_mode = OpenSSL::SSL::VERIFY_NONE if HTTPS
   response = http.get(uri.request_uri)
   JSON.parse(response.body)
 end
@@ -111,8 +113,8 @@ end
 def get_device_list
   uri = URI.parse("#{BASE_URL}/devices")
   http = Net::HTTP.new(uri.host, uri.port)
-  http.use_ssl = true
-  http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+  http.use_ssl = true if HTTPS
+  http.verify_mode = OpenSSL::SSL::VERIFY_NONE if HTTPS
   response = http.get(uri.request_uri)
   JSON.parse(response.body)
 end
