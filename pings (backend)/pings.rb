@@ -1,10 +1,11 @@
 BASE_URL = "http://localhost:3000" # change this based on where your server is running locally
-
+HTTPS = false
 # you shouldn't need to edit anything below here
 
 require 'json'
 require 'uri'
-require 'net/http'
+require 'net/https' if HTTPS
+require 'net/http' unless HTTPS
 require 'date'
 
 def run_tests!
@@ -74,7 +75,8 @@ end
 def post_request(device_id, epoch_time)
   uri = URI.parse(BASE_URL)
   http = Net::HTTP.new(uri.host, uri.port)
-  http.use_ssl = false
+  http.use_ssl = true if HTTPS
+  http.verify_mode = OpenSSL::SSL::VERIFY_NONE if HTTPS
   request = Net::HTTP::Post.new("/#{device_id}/#{epoch_time}")
   response = http.request(request)
   response.code == "200"
@@ -83,7 +85,8 @@ end
 def post_clear_data_request
   uri = URI.parse(BASE_URL)
   http = Net::HTTP.new(uri.host, uri.port)
-  http.use_ssl = false
+  http.use_ssl = true if HTTPS
+  http.verify_mode = OpenSSL::SSL::VERIFY_NONE if HTTPS
   request = Net::HTTP::Post.new("/clear_data")
   response = http.request(request)
   response.code == "200"
@@ -91,19 +94,28 @@ end
 
 def get_on_date(device_id, date)
   uri = URI.parse("#{BASE_URL}/#{device_id}/#{date}")
-  response = Net::HTTP.get_response(uri)
+  http = Net::HTTP.new(uri.host, uri.port)
+  http.use_ssl = true if HTTPS
+  http.verify_mode = OpenSSL::SSL::VERIFY_NONE if HTTPS
+  response = http.get(uri.request_uri)
   JSON.parse(response.body)
 end
 
 def get_on_dates(device_id, from, to)
   uri = URI.parse("#{BASE_URL}/#{device_id}/#{from}/#{to}")
-  response = Net::HTTP.get_response(uri)
+  http = Net::HTTP.new(uri.host, uri.port)
+  http.use_ssl = true if HTTPS
+  http.verify_mode = OpenSSL::SSL::VERIFY_NONE if HTTPS
+  response = http.get(uri.request_uri)
   JSON.parse(response.body)
 end
 
 def get_device_list
   uri = URI.parse("#{BASE_URL}/devices")
-  response = Net::HTTP.get_response(uri)
+  http = Net::HTTP.new(uri.host, uri.port)
+  http.use_ssl = true if HTTPS
+  http.verify_mode = OpenSSL::SSL::VERIFY_NONE if HTTPS
+  response = http.get(uri.request_uri)
   JSON.parse(response.body)
 end
 
