@@ -17,7 +17,7 @@
 #
 # Test that it's working by going to http://localhost:4567/ (the port number is from the Sinatra output just above)
 # Read the code to see other URLs you can access. Look at the data files for valid data ranges.
-# 
+#
 # If you come across issues getting this code to run, please document the issues and how you fixed them - we'd love
 # to see your thought process (and also fix it for others in future!)
 
@@ -31,6 +31,10 @@ end
 require 'date'
 require 'csv'
 require 'json'
+
+before do 
+  headers['Access-Control-Allow-Origin'] = "*"
+end
 
 get '/' do
   erb :index
