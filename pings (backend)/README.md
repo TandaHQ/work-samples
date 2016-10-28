@@ -30,7 +30,7 @@ You can use any method you like for storing the underlying data, and we'll be in
 
 **Retrieving data for a specific device**
 
-The server should accept GET requests to query ping times for specific device IDs, or for `all` device IDs. This should work in two formats: `/deviceID/:date` or `/deviceID/:from/:to`.
+The server should accept GET requests to query ping times for specific device IDs, or for `all` device IDs. This should work in two formats: `/:deviceID/:date` or `/:deviceID/:from/:to`.
 
 `:date` must be an ISO formatted date (`YYYY-MM-DD`). This represents all pings for that date in the UTC time zone. For example the request `/:deviceId/2016-02-24` would get all pings for the device between `2016-02-24 00:00:00 UTC` (**inclusive**) and `2016-02-25 00:00:00 UTC` (**exclusive**).
 
