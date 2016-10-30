@@ -63,13 +63,13 @@ Finally, replacing the `device_id` parameter with the string `all` should return
 
 ```javascript
 {
-  'eab88fbc-10c6-11e2-b622-1231381359d0': [
+  "eab88fbc-10c6-11e2-b622-1231381359d0": [
     1456050274,
     1456083687,
     1456129212,
     1456169429
   ],
-  '5225a416-3394-4e9f-9d97-e371d7615197': [
+  "5225a416-3394-4e9f-9d97-e371d7615197": [
     1456190884,
     1456230519
   ]
@@ -82,8 +82,8 @@ GET `/devices` should return a list of device IDs:
 
 ```javascript
 [
-  'eab88fbc-10c6-11e2-b622-1231381359d0',
-  '5225a416-3394-4e9f-9d97-e371d7615197'
+  "eab88fbc-10c6-11e2-b622-1231381359d0",
+  "5225a416-3394-4e9f-9d97-e371d7615197"
 ]
 ```
 
