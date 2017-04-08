@@ -77,7 +77,7 @@ def api_data_from_file(filename, from, to)
   to = Date.parse(to) unless to.is_a?(Date)
 
   data = CSV.parse(File.read("#{filename}.csv"), headers: true)
-  range = from..(to + 1)
+  range = from..to
 
   data.find_all {|row|
     date = Date.strptime(row['date'], "%d/%m/%y") rescue Date.parse(row['date'])
