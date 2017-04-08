@@ -45,7 +45,7 @@ def run_tests!
   lookup_date = timestamp_to_date(initial_post_data.values.first.first)
   expected_count = initial_post_data.values.flatten.find_all{|t| timestamp_to_date(t) == lookup_date}.count
   actions = get_on_date("all", lookup_date)
-  fail!("Expected #{expected_count} pings, got #{actions.count} pings.") unless actions.values.flatten.count == expected_count
+  fail!("Expected #{expected_count} pings, got #{actions.values.flatten.count} pings.") unless actions.values.flatten.count == expected_count
 
   puts %Q(\nGetting all data for all devices...)
   actions = get_on_dates("all", Date.new(2000, 1, 1), Date.new(2100, 1, 1))
