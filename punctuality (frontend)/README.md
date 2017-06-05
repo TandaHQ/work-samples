@@ -42,14 +42,7 @@ Once your server is set up, you should be able to visit it through a browser and
 2. Build at least one advanced feature
 3. Add one new feature (something that doesn't exist in the gif)
 
-Feel free to use any of these libraries:
-
-- jQuery
-- Underscore (Lodash is also okay)
-- Bootstrap
-- d3.js
-- moment.js (and related plugins)
-- QUnit (other test frameworks are okay)
+Feel free to use any javascript libraries you like.
 
 ## Submitting your code
 
