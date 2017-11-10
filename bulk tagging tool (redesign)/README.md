@@ -40,7 +40,7 @@ Here's a few more things you should know about tagging in Tanda. If you want to 
 - Staff can have multiple tags, usually they will be given a combination of a few tags
 - Managers won’t necessarily need to tag teams and award tags at the same time - right now we have every possible option visible at all times.
 
-[Tanda demo accounts](https://my.tanda.co/try/?utm_source=Github&utm_medium=challenge&utm_campaign=design-front-end) also include sample leave requests so you can get more of a feel of what's going on.
+You can signup for a free trail of Tanda to see how things work [Signup for a demo](https://my.tanda.co/try/?utm_source=Github&utm_medium=challenge&utm_campaign=design-front-end) Once you have an account you will find the bulk tagging tool in the tools menu via the my team page.
 
 ## Submitting your code
 
