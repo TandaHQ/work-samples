@@ -5,7 +5,7 @@ This task is a challenge for designers and front end web developers.
 When a business starts using Tanda for the first time, they need to make sure their staff are setup so they can be rostered and paid correctly.
 This setup involves making sure staff are tagged with teams for rostering i.e. ‘bar’, ‘kitchen’ etc. and with award tags for payroll i.e. ‘casual’ for casual staff, ‘part time’ for part time staff.
 
-For businesses with less than 15-20 staff they will often just go through and tag staff individually on their profiles however for larger businesses this can be very time consuming and it's quicker for them to do the tagging in on go.
+For businesses with less than 15-20 staff they will often just go through and tag staff individually on their profiles however for larger businesses this can be very time consuming and it's quicker for them to do the tagging in one go.
 
 We have a tool called 'bulk tagging' that allows them to do this. Unfortunately at the moment the layout and design on this page is clunky, unintuitive and managers can’t really use it without needing explanation from our support team over the phone.
 
