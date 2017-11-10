@@ -8,6 +8,7 @@ Welcome to the Tanda Code Challenges! If you've been sent this link, it's becaus
 Chances are you already know which challenge is right for you, but if not, a quick summary:
 
 - **analysis**: a challenge for data scientists. Challenges include programmatic data analysis and making actionable recommendations.
+- **bulk tagging**: a challenge for designers and front end web developers. Challenges include redesigning an existing feature to be easier to use.
 - **browse rosters**: a challenge for designers and front end web developers. Challenges include redesigning an existing feature to be easier to use.
 - **modeling**: a challenge for business analysts. Challenges include system design, process mapping, and working with APIs.
 - **punctuality**: a challenge for front end web developers/engineers. Challenges include building modular functionality, AJAX, and working with designs.
