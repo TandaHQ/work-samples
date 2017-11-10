@@ -1,4 +1,4 @@
-# Browse Rosters Page Redesign
+# Bulk Tagging Tool Redesign
 
 This task is a challenge for designers and front end web developers.
 
