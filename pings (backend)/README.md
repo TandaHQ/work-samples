@@ -93,4 +93,6 @@ If a POST is made to `/clear_data`, the server should delete all stored data.
 
 ## Submitting your code
 
-Before submitting, please ensure all tests in `pings.rb` pass. Package your code and instructions on how to run it alongside the files we've given you (this file, the test file, etc) in a zip archive and email that to us. If you were emailed this task, just reply to whoever emailed it to you. Otherwise send it to developers@tanda.co
+Before submitting, please ensure all tests in `pings.rb` pass. Package your code and instructions on how to run it alongside the files we've 
+given you (this file, the test file, etc) in a zip archive and email that to us. Please send your completed task to careers@tanda.co with 
+"Completed Task for Backend Challenge" in the subject line.

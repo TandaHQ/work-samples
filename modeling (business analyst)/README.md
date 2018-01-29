@@ -53,4 +53,5 @@ A field to exclude:
 
 ## Submitting your answer
 
-You can write your answer in whatever format you like, for example in Google Sheets or Word. If you were emailed this task, just reply to whoever emailed it to you with the document attached or linked to. Otherwise send your answer to hr@tanda.co
+You can write your answer in whatever format you like, for example in Google Sheets or Word. 
+Please send your completed task to careers@tanda.co with "Completed Task for Business Analyst Challenge" in the subject line.

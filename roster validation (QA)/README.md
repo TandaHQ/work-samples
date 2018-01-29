@@ -32,4 +32,6 @@ Investigate the roster validation feature in Tanda and develop a test plan that 
 
 ## Submitting Your Solution
 
-You can provide your solution in whichever format you like, for example in Google Sheets or Word and include any code that you have written as part of this task (though code is not mandatory for this task). If you were emailed this task, just reply to whoever emailed it to you with the document attached or linked to. Otherwise send your answer to developers@tanda.co
+You can provide your solution in whichever format you like, for example in Google Sheets or Word and include any code that you have written 
+as part of this task (though code is not mandatory for this task). Please send your completed task to careers@tanda.co with 
+"Completed Task for QA Challenge" in the subject line.

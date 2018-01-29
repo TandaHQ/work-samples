@@ -46,4 +46,6 @@ Feel free to use any javascript libraries you like.
 
 ## Submitting your code
 
-Your code will probably be a HTML file, some JavaScript files, and some CSS files. Please package those alongside the files we've given you (this file, the Ruby server, etc) in a zip archive and email that to us. If you were emailed this task, just reply to whoever emailed it to you. Otherwise send it to developers@tanda.co
+Your code will probably be a HTML file, some JavaScript files, and some CSS files. Please package those alongside the files we've given you 
+(this file, the Ruby server, etc) in a zip archive and email that to us. 
+Please send your completed task to careers@tanda.co with "Completed Task for Frontend Challenge" in the subject line.

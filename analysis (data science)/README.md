@@ -31,4 +31,5 @@ Investigate and present the following in whichever format you think is most appr
 
 ## Submitting Your Answer
 
-You can write your answer in whatever format you like, for example in Google Sheets or Word and include any code that you have written as part of this task. If you were emailed this task, just reply to whoever emailed it to you with the document attached or linked to. Otherwise send your answer to developers@tanda.co
+You can write your answer in whatever format you like, for example in Google Sheets or Word and include any code that you have written as 
+part of this task. Please send your completed task to careers@tanda.co with "Completed Task for Data Science Challenge" in the subject line.
