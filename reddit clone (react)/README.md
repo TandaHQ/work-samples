@@ -5,7 +5,7 @@ or logic development, this challenge is for you.
 
 ## The challenge
 
-[Reddit](https://www.reddit.com/) looks okay... but we think you can remake it your own image. Your challenge it use the Reddit API
+[Reddit](https://www.reddit.com/) looks okay... but we think you can remake it in your own image. Your challenge is to use the Reddit API
 to build a Reddit clone, using either React, or React Native. There are a couple things we need to see and a couple that would be
 interesting extensions if you're feeling adventurous.
 
