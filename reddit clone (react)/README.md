@@ -44,4 +44,4 @@ You'll need go to https://www.reddit.com/prefs/apps and create an application.
 ## Submitting your code
 
 Package your code and instructions on how to run it alongside the files we've given you, and either upload them to your own repo, or
-zip them and send them to careers@tanda.co.
+zip them and send them to developers@tanda.co.
