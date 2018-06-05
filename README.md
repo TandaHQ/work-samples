@@ -7,12 +7,13 @@ Welcome to the Tanda Code Challenges! If you've been sent this link, it's becaus
 
 Chances are you already know which challenge is right for you, but if not, a quick summary:
 
-- **analysis**: a challenge for data scientists. Challenges include programmatic data analysis and making actionable recommendations.
-- **bulk tagging**: a challenge for designers and front end web developers. Challenges include redesigning an existing feature to be easier to use.
 - **browse rosters**: a challenge for designers and front end web developers. Challenges include redesigning an existing feature to be easier to use.
+- **bulk tagging**: a challenge for designers and front end web developers. Challenges include redesigning an existing feature to be easier to use.
 - **modeling**: a challenge for business analysts. Challenges include system design, process mapping, and working with APIs.
-- **punctuality**: a challenge for front end web developers/engineers. Challenges include building modular functionality, AJAX, and working with designs.
 - **pings**: a challenge for back end developers/engineers. Challenges include building a simple and stable server, data storage, and responding to HTTP requests.
+- **punctuality**: a challenge for front end web developers/engineers. Challenges include building modular functionality, AJAX, and working with designs.
+- **reddit clone**: a challenge for React/React Native developers. Challenges include designing a new interface for Reddit and interacting with an external API.
+- **roster validation**: a challenge for QA analysts. Challenges include understanding an existing Tanda feature and designing a test plan.
 
 Each challenge will have more information about how to complete the challenge, and how to submit them when you're done. If you get stuck at 
 any stage, please ask! If you've been chatting to someone from Tanda, email them back, otherwise just send an email to developers@tanda.co 
