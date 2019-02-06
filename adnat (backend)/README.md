@@ -51,6 +51,7 @@ If the finish time of a shift is earlier than the start time, the shift should b
 
 #### 4. Penalty rates on Sundays (tricky)
 People should get paid 2x their hourly rate if they work on a Sunday. If the shift goes overnight, the 2x should only apply to the hours worked on Sunday. For the sake of simplicity, subtract the break length from the end of the shift. For example:
+
 | start | finish | break length | shift cost (assuming $10 hourly rate) |
 | - | - | - | - |
 | 10pm Sunday | 3am Monday | 1 hour | $60 (5h at work – 1h break = 2h worked on Sunday and 2h worked on Monday) |
