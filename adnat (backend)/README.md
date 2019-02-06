@@ -4,7 +4,8 @@ For this challenge you will be creating highly simplified version of the Tanda w
 
 Your app is to have three models: users, organisations, and shifts. Your database layout should closely resemble the following [entity-relationship diagram](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model#Crow's_foot_notation):
 
-Figure 1
+Figure 1:
+
 ![](https://i.imgur.com/w1YzNY6.png)
 
 ## How your app should work
@@ -13,19 +14,22 @@ The following illustrations should only serve as an example. You do not need to 
 
 An unauthenticated user should first be prompted to log in, sign up, or reset their password:
 
-Figure 2
+Figure 2:
+
 ![](https://i.imgur.com/03QlRMb.png)
 
 Upon registration users will not belong to an organisation, so when they log in for the first time, they should be prompted to join an organisation (or create a new one).
 
-Figure 3
+Figure 3:
+
 ![](https://i.imgur.com/crhWnbK.png)
 
 All users should be able to edit all organisations (i.e. their names and their hourly rates).
 
 Once a user has joined an organisation, the home page should change to become a listing of all shifts at their organisation.
 
-Figure 4
+Figure 4:
+
 ![](https://i.imgur.com/bSU1kzA.png)
 
 A few things to note in relation to the shift listing:
