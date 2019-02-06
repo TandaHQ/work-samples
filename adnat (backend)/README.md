@@ -32,8 +32,9 @@ Figure 4:
 
 ![](https://i.imgur.com/bSU1kzA.png)
 
-A few things to note in relation to the shift listing:
+A few things to note:
 * Shifts should be ordered with the most recent listed first.
+* Breaks are considered unpaid and thus subtracted from the shift length to determine the shift cost.
 * You will need to incorporate a way of creating a new shift for the user that is logged in. As with everything else, you don't need to copy the way it was done in the screenshot above.
 * As per Figure 1, shift date and start time are to be stored in the same database column. Separating the two (and joining them together when you create a shift) is an exercise left to the reader.
 
