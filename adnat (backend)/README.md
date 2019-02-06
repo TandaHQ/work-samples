@@ -39,7 +39,7 @@ A few things to note:
 * As per Figure 1, shift date and start time are to be stored in the same database column. Separating the two (and joining them together when you create a shift) is an exercise left to the reader.
 
 ### Optional exercises
-Here are some optional exercises for you to do. We recommend that you try at least one of these. These are all mutually compatible, so you could do all of them.
+Here are some optional exercises for you to do. We recommend that you try at least one of them. They are all mutually compatible, so you could do all of them.
 
 #### 1. Users details (easy)
 Allow users to change their own name, email address, or password.
