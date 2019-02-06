@@ -34,7 +34,7 @@ Figure 4:
 
 A few things to note in relation to the shift listing:
 * Shifts should be ordered with the most recent listed first.
-* You will need to incorporate a way of creating a new shift for the user that is logged in.
+* You will need to incorporate a way of creating a new shift for the user that is logged in. As with everything else, you don't need to copy the way it was done in the screenshot above.
 * As per Figure 1, shift date and start time are to be stored in the same database column. Separating the two (and joining them together when you create a shift) is an exercise left to the reader.
 
 ### Optional exercises
