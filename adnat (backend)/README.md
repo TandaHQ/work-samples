@@ -33,6 +33,7 @@ Figure 4:
 ![](https://i.imgur.com/bSU1kzA.png)
 
 A few things to note:
+* The hourly rate at Bob's Burgers in the screenshot above is $10/h.
 * Shifts should be ordered with the most recent listed first.
 * Breaks are considered unpaid and are thus subtracted from the shift length (finish time minus start time) to determine hours worked (which in turn determines the shift cost).
 * You will need to incorporate a way of creating a new shift for the user that is logged in. As with everything else, you don't need to copy the way it was done in the screenshot above.
