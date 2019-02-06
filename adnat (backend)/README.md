@@ -61,7 +61,7 @@ People should get paid 2x their hourly rate if they work on a Sunday. If the shi
 If you don't do (3) then you won't need to account for this edge case.
 
 #### 5. Multiple breaks (tricky)
-nstead of a shift having a single break length, it could have multiple. The sum of all these should be taken into account when calculating the shift cost.
+People often take more than one break when they work. For this exercise, instead of a shift having a single break length, it could have multiple. The sum of all these should be taken into account when calculating the cost of the shift.
 
 #### 6. Your own idea
 Feel free to add in a feature of your own devising. You're more than welcome to [sign up for a trial Tanda account](https://www.tanda.co/) to look for inspiration.
