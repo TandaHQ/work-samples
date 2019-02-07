@@ -69,7 +69,7 @@ Allow users to filter which shifts are visible based on employee or a date range
 #### 5. Overnight shifts (medium)
 If the finish time of a shift is earlier than the start time, the shift should be considered overnight. For example, if the start time is 7:30pm and the finish time is 1:30am, then it is an overnight shift that goes for 6 hours.
 
-#### 6. Penalty rates on Sundays (tricky)
+#### 6. Penalty rates on Sundays (medium)
 People should get paid 2x their hourly rate if they work on a Sunday. If you do exercise (5) then you will need to account for overnight shifts in the following manner: The 2x should only apply to the hours worked on Sunday. For the sake of simplicity, subtract the break length from the end of the shift. For example:
 
 | start | finish | break length | shift cost (assuming $10 hourly rate) |
@@ -81,7 +81,10 @@ People should get paid 2x their hourly rate if they work on a Sunday. If you do 
 #### 7. Multiple breaks (tricky)
 People often take more than one break when they work. For this exercise, instead of a shift having a single break length, it could have multiple. The sum of all these should be taken into account when calculating `hours worked` and `shift cost`.
 
-#### 8. Your own idea
+#### 8. Multiple organisations (tricky)
+Some people have 2+ jobs. Extend organisation functionality to allow users to have more than one organisation. You'll need to rethink the shifts model. Shifts currently belong to a user (who belongs to a single organisation). If there are multiple organisations involved, this falls apart, because you don't know which organisation the user worked the shift at.
+
+#### 9. Your own idea
 Feel free to add in a feature of your own devising. You're more than welcome to [sign up for a trial Tanda account](https://www.tanda.co/) to look for inspiration.
 
 You will be judged on the the appropriate use of database constraints, your choice of data types, working data validation, and the general quality of your Ruby code. Be a show off! Impress us with your strong command of relational databases and idiomatic Ruby on Rails.
