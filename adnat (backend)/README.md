@@ -18,9 +18,15 @@ Figure 2:
 
 ![](https://i.imgur.com/03QlRMb.png)
 
-Upon registration users will not belong to an organisation, so when they log in for the first time, they should be prompted to join an organisation (or create a new one).
+As per Figure 1, users have names, so this should be a field on your sign up page.
 
 Figure 3:
+
+![](https://i.imgur.com/eBxdJgk.png)
+
+After signing up, users will not belong to an organisation, so when they log in for the first time, they should be prompted to join an organisation (or create a new one).
+
+Figure 4:
 
 ![](https://i.imgur.com/crhWnbK.png)
 
@@ -28,7 +34,7 @@ All users should be able to edit all organisations (i.e. their names and their h
 
 Once a user has joined an organisation, the home page should change to become a listing of all shifts at their organisation.
 
-Figure 4:
+Figure 5:
 
 ![](https://i.imgur.com/bSU1kzA.png)
 
@@ -46,7 +52,7 @@ Here are some optional exercises for you to do. We recommend that you try at lea
 Allow users to change their own name, email address, or password.
 
 #### 2. Swap organisations (easy)
-After a user has joined an organisation, allow them to join (thereby leaving their current organisation) or edit existing ones, or create a new one, as in Figure 3.
+After a user has joined an organisation, allow them to join (thereby leaving their current organisation) or edit existing ones, or create a new one, as in Figure 4.
 
 #### 3. Overnight shifts (medium)
 If the finish time of a shift is earlier than the start time, the shift should be considered overnight. For example, if the start time is 7:30pm and the finish time is 1:30am, then it is an overnight shift that goes for 6 hours.
