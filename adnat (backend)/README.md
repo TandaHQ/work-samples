@@ -60,11 +60,17 @@ Allow users to change their own name, email address, or password.
 #### 2. Swap organisations (easy)
 After a user has joined an organisation, allow them to join (thereby leaving their current organisation) or edit existing ones, or create a new one, as in Figure 4.
 
-#### 3. Overnight shifts (medium)
+#### 3. Modifying/Deleting shifts (easy)
+Allow users to modify or delete existing shifts.
+
+#### 4. Filtering shifts (medium)
+Allow users to filter which shifts are visible based on employee or a date range or both.
+
+#### 5. Overnight shifts (medium)
 If the finish time of a shift is earlier than the start time, the shift should be considered overnight. For example, if the start time is 7:30pm and the finish time is 1:30am, then it is an overnight shift that goes for 6 hours.
 
-#### 4. Penalty rates on Sundays (tricky)
-People should get paid 2x their hourly rate if they work on a Sunday. If the shift goes overnight, the 2x should only apply to the hours worked on Sunday. For the sake of simplicity, subtract the break length from the end of the shift. For example:
+#### 6. Penalty rates on Sundays (tricky)
+People should get paid 2x their hourly rate if they work on a Sunday. If you do (5) then you will need to account for overnight shifts in the following manner: The 2x should only apply to the hours worked on Sunday. For the sake of simplicity, subtract the break length from the end of the shift. For example:
 
 | start | finish | break length | shift cost (assuming $10 hourly rate) |
 | - | - | - | - |
@@ -72,12 +78,10 @@ People should get paid 2x their hourly rate if they work on a Sunday. If the shi
 | 5pm Sunday | 2am Monday | 2 hours | $140 (9h at work – 2h break = 7h worked on Sunday) |
 | 9pm Sunday | 1am Monday | 2 hours | $40 (4h at work – 2h break = 2h worked on Sunday) |
 
-If you don't do (3) then you won't need to account for this edge case.
-
-#### 5. Multiple breaks (tricky)
+#### 7. Multiple breaks (tricky)
 People often take more than one break when they work. For this exercise, instead of a shift having a single break length, it could have multiple. The sum of all these should be taken into account when calculating `hours worked` and `shift cost`.
 
-#### 6. Your own idea
+#### 8. Your own idea
 Feel free to add in a feature of your own devising. You're more than welcome to [sign up for a trial Tanda account](https://www.tanda.co/) to look for inspiration.
 
-You will be judged on the the appropriate use of database constraints, choice of data types, and the quality of your Ruby code. Be a show off! Impress us with your strong command of relational databases and idiomatic Ruby on Rails.
+You will be judged on the the appropriate use of database constraints, your choice of data types, working data validation, and the general quality of your Ruby code. Be a show off! Impress us with your strong command of relational databases and idiomatic Ruby on Rails.
