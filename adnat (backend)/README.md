@@ -39,8 +39,8 @@ Figure 5:
 ![](https://i.imgur.com/bSU1kzA.png)
 
 A few things to note:
-* The hourly rate at Bob's Burgers in Figure 4 is $10/h.
-* Your table should include all the columns in Figure 4, and should be ordered with the most recent shifts listed first.
+* The hourly rate at Bob's Burgers in Figure 5 is $10/h.
+* Your table should include all the columns in Figure 5, and should be ordered with the most recent shifts listed first.
 * Breaks are considered unpaid and are thus subtracted from `shift length` to determine `hours worked` (which in turn determines `shift cost`):
   ```
   shift length = finish time – start time
