@@ -41,7 +41,7 @@ Figure 5:
 A few things to note:
 * The hourly rate at Bob's Burgers in the screenshot above is $10/h.
 * Shifts should be ordered with the most recent listed first.
-* Breaks are considered unpaid and are thus subtracted from the shift length to determine hours worked (which in turn determines the shift cost):
+* Breaks are considered unpaid and are thus subtracted from the shift length to determine `hours worked` (which in turn determines `shift cost`):
   ```
   shift length = finish time – start time
   hours worked = shift length - break length
@@ -74,7 +74,7 @@ People should get paid 2x their hourly rate if they work on a Sunday. If the shi
 If you don't do (3) then you won't need to account for this edge case.
 
 #### 5. Multiple breaks (tricky)
-People often take more than one break when they work. For this exercise, instead of a shift having a single break length, it could have multiple. The sum of all these should be taken into account when calculating the cost of the shift.
+People often take more than one break when they work. For this exercise, instead of a shift having a single break length, it could have multiple. The sum of all these should be taken into account when calculating `hours worked` and `shift cost`.
 
 #### 6. Your own idea
 Feel free to add in a feature of your own devising. You're more than welcome to [sign up for a trial Tanda account](https://www.tanda.co/) to look for inspiration.
