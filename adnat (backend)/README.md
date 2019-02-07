@@ -79,7 +79,7 @@ Allow users to filter which shifts are visible based on employee or a date range
 When creating a shift, if the finish time of a shift is earlier than the start time, the shift should be considered overnight. For example, if the start time is 7:30pm and the finish time is 1:30am, then it is an overnight shift that goes for 6 hours.
 
 #### 5. Penalty rates on Sundays (medium)
-People should get paid 2x their hourly rate if they work on a Sunday. If you do exercise (4) then you will need to account for overnight shifts in the following manner: The 2x should only apply to the hours worked on Sunday. For the sake of simplicity, subtract the break length from the end of the shift. For example:
+The hourly rate should be doubled for shifts worked on a Sunday. If you do exercise (4) then you will need to account for overnight shifts in the following manner: The 2x should only apply to the hours worked on Sunday. For the sake of simplicity, subtract the break length from the end of the shift. For example:
 
 | start | finish | break length | shift cost (assuming $10 hourly rate) |
 | - | - | - | - |
