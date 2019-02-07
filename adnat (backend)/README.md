@@ -10,7 +10,7 @@ Figure 1:
 
 ## How your app should work
 
-The following illustrations should only serve as an example. You do not need to follow the designs presented below. You can split functionality out to other pages (e.g. a separate page for creating an organisation). Just make sure it is all there.
+The following illustrations should only serve as an example. You do not need to follow the designs presented below. You can split functionality out to other pages. Just make sure it is all there.
 
 An unauthenticated user should first be prompted to log in, sign up, or reset their password:
 
@@ -30,19 +30,21 @@ Figure 4:
 
 ![](https://i.imgur.com/5CTfYS7.png)
 
-All users should be able to edit all organisations (i.e. their names and their hourly rates).
+Users should be able to edit all organisations (i.e. their names and their hourly rates).
 
 Figure 5:
 
-![](https://i.imgur.com/XsXcduU.png)
+![](https://i.imgur.com/zOLnsxp.png)
 
-Once a user has joined an organisation, the home page should change to become an overview of actions for that organisation: viewing shifts, editing the organisation as per Figure 5, or leaving the organisation.
+Once a user has joined an organisation, the home page should change to become an overview of actions for that organisation: viewing shifts, editing the organisation, or leaving the organisation.
 
 Figure 6:
 
 ![](https://i.imgur.com/1o6OXt1.png)
 
-Finally, the shift page should show shifts that belong to the user and their fellow employees at their organisation.
+Leaving an organisation should return the user to the state they are in just after they sign up, i.e. not belonging to any organisations.
+
+Finally, the shift page should show all shifts that belong to the user and their fellow employees at their organisation.
 
 Figure 7:
 
@@ -54,7 +56,7 @@ A few things to note:
 * Breaks are considered unpaid and are thus subtracted from `shift length` to determine `hours worked` (which in turn determines `shift cost`):
   ```
   shift length = finish time – start time
-  hours worked = shift length - break length
+  hours worked = shift length - break length in hours
   shift cost = hours worked * organisation hourly rate
   ```
   `shift length` doesn't need to be displayed in the table, but `hours worked` and `shift cost` do.
@@ -94,4 +96,4 @@ Some people have 2+ jobs. Extend organisation functionality to allow users to ha
 #### 8. Your own idea
 Feel free to add in a feature of your own devising. You're more than welcome to [sign up for a trial Tanda account](https://www.tanda.co/) to look for inspiration.
 
-You will be judged on the the appropriate use of database constraints, your choice of data types, working data validation, and the general quality of your Ruby code. Be a show off! Impress us with your strong command of relational databases and idiomatic Ruby on Rails.
+You will be judged on the the appropriate use of database constraints, your choice of data types, working data validation, the general quality of your Ruby code, and how closely your solution matches this spec. Be a show off! Impress us with your strong command of relational databases and idiomatic Ruby on Rails.
