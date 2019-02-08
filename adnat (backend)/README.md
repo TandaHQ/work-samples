@@ -93,7 +93,10 @@ People often take more than one break when they work. For this exercise, instead
 #### 7. Multiple organisations (tricky)
 Some people have 2+ jobs. Extend organisation functionality to allow users to belong to more than one organisation. You will need to rethink the shifts model. Shifts currently belong to a user (who belongs to a single organisation). If there are multiple organisations involved, this falls apart, because you don't know which organisation the user worked the shift at.
 
-#### 8. Your own idea
+#### 8. Unit tests
+Unit tests are a good idea. We don't mandate that you write any for this challenge, but feel free to go ahead and write some tests for your code.
+
+#### 9. Your own idea
 Feel free to add in a feature of your own devising. You're more than welcome to [sign up for a trial Tanda account](https://www.tanda.co/) to look for inspiration.
 
 You will be judged on the the appropriate use of database constraints, your choice of data types, working data validation, the general quality of your Ruby code, and how closely your solution matches this spec. Be a show off! Impress us with your strong command of relational databases and idiomatic Ruby on Rails.
