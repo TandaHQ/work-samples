@@ -107,3 +107,5 @@ It is possible to build a solution to this challenge without writing a line of J
 Feel free to add a feature of your own devising. You're more than welcome to [sign up for a trial Tanda account](https://www.tanda.co/) to look for inspiration.
 
 You will be judged on the the appropriate use of database constraints, your choice of data types, working data validation, the general quality of your Ruby code, and how closely your solution matches this spec. Be a show off! Impress us with your strong command of relational databases and idiomatic Ruby on Rails.
+
+### [Click here for a video demo](https://www.youtube.com/watch?v=A8u8tBWoM4k)
