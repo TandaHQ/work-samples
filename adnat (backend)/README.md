@@ -16,31 +16,31 @@ An unauthenticated user should first be prompted to log in, sign up, or reset th
 
 Figure 2:
 
-![](https://i.imgur.com/okK9Ojz.png)
+![](https://i.imgur.com/XLhRtL3.png)
 
 As per Figure 1, users have names, so "Name" should be a field on your sign up page.
 
 Figure 3:
 
-![](https://i.imgur.com/P6ehdFS.png)
+![](https://i.imgur.com/yflhRac.png)
 
 After signing up, users will not belong to an organisation, so when they log in for the first time, they should be prompted to join an organisation (or create a new one).
 
 Figure 4:
 
-![](https://i.imgur.com/5CTfYS7.png)
+![](https://i.imgur.com/V53XD3X.png)
 
 Users should be able to edit all organisations (i.e. their names and their hourly rates).
 
 Figure 5:
 
-![](https://i.imgur.com/zOLnsxp.png)
+![](https://i.imgur.com/XMoFEzj.png)
 
 Once a user has joined an organisation, the home page should change to become an overview of actions for that organisation: viewing shifts, editing the organisation, or leaving the organisation.
 
 Figure 6:
 
-![](https://i.imgur.com/1o6OXt1.png)
+![](https://i.imgur.com/7tZ9Gfc.png)
 
 Leaving an organisation should return the user to the state they are in just after they sign up, i.e. not belonging to any organisations.
 
@@ -48,7 +48,7 @@ Finally, the shift page should show all shifts that belong to the user and their
 
 Figure 7:
 
-![](https://i.imgur.com/OI0TKm9.png)
+![](https://i.imgur.com/3XS2mvP.png)
 
 A few things to note:
 * The hourly rate at Bob's Burgers in Figure 7 is $10/h.
