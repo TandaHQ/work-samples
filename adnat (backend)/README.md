@@ -98,10 +98,10 @@ Unit tests are a good idea. We don't mandate that you write any for this challen
 
 #### 9. JavaScript enhancements
 It is possible to build a solution to this challenge without writing a line of JS. However, a solution that used some would be more exciting. Here are some ideas:
-* A datepicker for the shift date field,
-* Using Ajax to create shifts,
-* Sortable column headings,
-* Making the whole thing an SPA in React.
+* A datepicker for the shift date field
+* Using Ajax to create shifts
+* Sortable column headings
+* Making the whole thing an SPA in React
 
 #### 10. Your own idea
 Feel free to add a feature of your own devising. You're more than welcome to [sign up for a trial Tanda account](https://www.tanda.co/) to look for inspiration.
