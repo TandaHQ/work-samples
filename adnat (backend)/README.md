@@ -96,7 +96,14 @@ Some people have 2+ jobs. Extend organisation functionality to allow users to be
 #### 8. Unit tests
 Unit tests are a good idea. We don't mandate that you write any for this challenge, but feel free to go ahead and write some tests for your code.
 
-#### 9. Your own idea
-Feel free to add in a feature of your own devising. You're more than welcome to [sign up for a trial Tanda account](https://www.tanda.co/) to look for inspiration.
+#### 9. JavaScript enhancements
+It is possible to build a solution to this challenge without writing a line of JS. However, a solution that used some would be more exciting. Here are some ideas:
+* A datepicker for the shift date field,
+* Using Ajax to create shifts,
+* Sortable column headings,
+* Making the whole thing an SPA in React.
+
+#### 10. Your own idea
+Feel free to add a feature of your own devising. You're more than welcome to [sign up for a trial Tanda account](https://www.tanda.co/) to look for inspiration.
 
 You will be judged on the the appropriate use of database constraints, your choice of data types, working data validation, the general quality of your Ruby code, and how closely your solution matches this spec. Be a show off! Impress us with your strong command of relational databases and idiomatic Ruby on Rails.
