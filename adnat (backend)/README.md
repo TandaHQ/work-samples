@@ -2,7 +2,7 @@
 
 For this challenge you will be creating highly simplified version of the Tanda web app from scratch using [Ruby on Rails](https://rubyonrails.org/). This is a Ruby on Rails challenge, so don't worry about design too much. Just make sure it's usable. You should use Git as you build your solution. For submission you are asked to push your repo to GitHub and provide us with the link and any necessary instructions.
 
-Your app is to have three models: users, organisations, and shifts. Your database layout should closely resemble the following [entity-relationship diagram](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model#Crow's_foot_notation):
+Your app is to have three models: users, organisations, and shifts. Your database should closely resemble the following [entity-relationship diagram](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model#Crow's_foot_notation):
 
 Figure 1:
 
