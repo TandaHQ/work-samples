@@ -11,7 +11,11 @@ router.use((req, res, next) => {
   next();
 });
 
-router.get("/", (req, res) =>
+router.get("/", (req, res) => {
+  if (!req.user.organisation_id) {
+    return res.status(401).json({ error: "You're not in an organisation" });
+  }
+
   DB.all(
     "SELECT shifts.* FROM shifts INNER JOIN users ON shifts.user_id = users.id WHERE users.organisation_id = ?",
     req.user.organisation_id
@@ -36,13 +40,17 @@ router.get("/", (req, res) =>
     .then(shifts => res.json(shifts))
     .catch(err => {
       if (err && err.statusCode) {
-        return res.sendStatus(err.statusCode);
+        return res.status(err.statusCode).json({ error: err.error });
       }
       throw err;
-    })
-);
+    });
+});
 
 router.post("/", (req, res) => {
+  if (!req.user.organisation_id) {
+    return res.status(401).json({ error: "You're not in an organisation" });
+  }
+
   const { userId, start, finish, breakLength } = req.body;
 
   DB.get(
@@ -52,7 +60,7 @@ router.post("/", (req, res) => {
   )
     .then(user => {
       if (!user) {
-        throw { statusCode: 404 };
+        throw { statusCode: 404, error: "No known user with that ID" };
       }
     })
     .then(() =>
@@ -79,13 +87,17 @@ router.post("/", (req, res) => {
     )
     .catch(err => {
       if (err && err.statusCode) {
-        return res.sendStatus(err.statusCode);
+        return res.status(err.statusCode).json({ error: err.error });
       }
       throw err;
     });
 });
 
-router.put("/:id", (req, res) =>
+router.put("/:id", (req, res) => {
+  if (!req.user.organisation_id) {
+    return res.status(401).json({ error: "You're not in an organisation" });
+  }
+
   DB.get(
     "SELECT shifts.* FROM shifts INNER JOIN users ON shifts.user_id = users.id WHERE users.organisation_id = ? AND shifts.id = ?",
     req.user.organisation_id,
@@ -93,7 +105,7 @@ router.put("/:id", (req, res) =>
   )
     .then(shift => {
       if (!shift) {
-        throw { statusCode: 404 };
+        throw { statusCode: 404, error: "No known shift with that ID" };
       }
 
       return DB.run(
@@ -107,13 +119,17 @@ router.put("/:id", (req, res) =>
     .then(() => res.sendStatus(200))
     .catch(err => {
       if (err && err.statusCode) {
-        return res.sendStatus(err.statusCode);
+        return res.status(err.statusCode).json({ error: err.error });
       }
       throw err;
-    })
-);
+    });
+});
 
-router.delete("/:id", (req, res) =>
+router.delete("/:id", (req, res) => {
+  if (!req.user.organisation_id) {
+    return res.status(401).json({ error: "You're not in an organisation" });
+  }
+
   DB.get(
     "SELECT shifts.* FROM shifts INNER JOIN users ON shifts.user_id = users.id WHERE users.organisation_id = ? AND shifts.id = ?",
     req.user.organisation_id,
@@ -121,11 +137,18 @@ router.delete("/:id", (req, res) =>
   )
     .then(shift => {
       if (!shift) {
-        throw { statusCode: 404 };
+        throw { statusCode: 404, error: "No known shift with that ID" };
       }
+
       return DB.run("DELETE FROM shifts WHERE id = ?", shift.id);
     })
     .then(() => res.sendStatus(200))
-);
+    .catch(err => {
+      if (err && err.statusCode) {
+        return res.status(err.statusCode).json({ error: err.error });
+      }
+      throw err;
+    });
+});
 
 module.exports = router;

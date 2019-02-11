@@ -14,7 +14,9 @@ router.post("/signup", (req, res) => {
   } = req.body;
 
   if (plaintextPassword !== plaintextPasswordConfirmation) {
-    return res.sendStatus(400);
+    return res
+      .status(400)
+      .json({ error: "Password does not match password confirmation" });
   }
 
   const sessionId = uuidv4();
@@ -22,7 +24,10 @@ router.post("/signup", (req, res) => {
   DB.get("SELECT * FROM users WHERE email = ?", email)
     .then(user => {
       if (user) {
-        throw { statusCode: 400 };
+        throw {
+          statusCode: 400,
+          error: "A user with that email already exists"
+        };
       }
     })
     .then(() => hashPassword(plaintextPassword))
@@ -45,7 +50,7 @@ router.post("/signup", (req, res) => {
     .then(() => res.json({ sessionId }))
     .catch(err => {
       if (err && err.statusCode) {
-        return res.sendStatus(err.statusCode);
+        return res.status(err.statusCode).json({ error: err.error });
       }
       throw err;
     });
@@ -58,12 +63,18 @@ router.post("/login", (req, res) => {
   DB.get("SELECT * FROM users WHERE email = ?", email)
     .then(user => {
       if (!user) {
-        throw { statusCode: 404 };
+        throw {
+          statusCode: 404,
+          error: "No user matches that email and password combination"
+        };
       }
 
       return comparePassword(plaintextPassword, user.password).then(ok => {
         if (!ok) {
-          throw { statusCode: 404 };
+          throw {
+            statusCode: 404,
+            error: "No user matches that email and password combination"
+          };
         }
         return user;
       });
@@ -78,7 +89,7 @@ router.post("/login", (req, res) => {
     .then(() => res.json({ sessionId }))
     .catch(err => {
       if (err && err.statusCode) {
-        return res.sendStatus(err.statusCode);
+        return res.status(err.statusCode).json({ error: err.error });
       }
       throw err;
     });
@@ -92,7 +103,7 @@ router.delete("/logout", sessionMiddleware, (req, res) => {
   )
     .then(session => {
       if (!session) {
-        throw { statusCode: 401 };
+        throw { statusCode: 401, error: "You are not logged in" };
       }
 
       return session;
@@ -106,7 +117,7 @@ router.delete("/logout", sessionMiddleware, (req, res) => {
     .then(() => res.sendStatus(200))
     .catch(err => {
       if (err && err.statusCode) {
-        return res.sendStatus(err.statusCode);
+        return res.status(err.statusCode).json({ error: err.error });
       }
 
       throw err;

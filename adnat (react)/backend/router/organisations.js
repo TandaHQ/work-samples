@@ -20,6 +20,10 @@ router.get("/", (req, res) =>
 router.post("/join", (req, res) => {
   const { organisationId } = req.body;
 
+  if (req.user.organisation_id) {
+    return res.status(400).json({ error: "You're already in an organisation" });
+  }
+
   DB.get("SELECT * FROM organisations WHERE id = ?", organisationId).then(
     org => {
       if (!org) {
@@ -40,10 +44,17 @@ router.post("/join", (req, res) => {
 router.post("/create_join", (req, res) => {
   const { name, hourlyRate } = req.body;
 
+  if (req.user.organisation_id) {
+    return res.status(400).json({ error: "You're already in an organisation" });
+  }
+
   DB.get("SELECT * FROM organisations WHERE name = ?", name)
     .then(org => {
       if (org) {
-        throw { statusCode: 400 };
+        throw {
+          statusCode: 400,
+          error: "An organisation with that name already exists"
+        };
       }
     })
     .then(() =>
@@ -65,22 +76,17 @@ router.post("/create_join", (req, res) => {
     )
     .catch(err => {
       if (err && err.statusCode) {
-        return res.sendStatus(err.statusCode);
+        return res.status(err.statusCode).json({ error: err.error });
       }
       throw err;
     });
 });
 
 router.post("/leave", (req, res) => {
-  DB.run("UPDATE users SET organisation_id = NULL WHERE id = ?", req.user.id)
-    .then(() => res.sendStatus(200))
-    .catch(err => {
-      if (err && err.statusCode) {
-        return res.sendStatus(err.statusCode);
-      }
-
-      throw err;
-    });
+  DB.run(
+    "UPDATE users SET organisation_id = NULL WHERE id = ?",
+    req.user.id
+  ).then(() => res.sendStatus(200));
 });
 
 router.put("/:id", (req, res) => {
@@ -103,9 +109,8 @@ router.put("/:id", (req, res) => {
     .then(() => res.sendStatus(200))
     .catch(err => {
       if (err && err.statusCode) {
-        return res.sendStatus(err.statusCode);
+        return res.status(err.statusCode).json({ error: err.error });
       }
-
       throw err;
     });
 });

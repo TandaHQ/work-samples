@@ -4,7 +4,7 @@ const sessionMiddleware = (req, res, next) => {
   const sessionId = req.headers.authorization;
 
   if (!sessionId) {
-    return res.sendStatus(401);
+    return res.status(401).json({ error: "No session ID provided" });
   }
 
   DB.get(
@@ -12,7 +12,9 @@ const sessionMiddleware = (req, res, next) => {
     sessionId
   ).then(user => {
     if (!user) {
-      return res.sendStatus(401);
+      return res
+        .status(401)
+        .json({ error: "Session ID does not match any valid sessions" });
     }
 
     req.user = user;
