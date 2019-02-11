@@ -69,6 +69,27 @@ router.post("/create_join", (req, res) => {
     });
 });
 
+router.post("/leave", (req, res) => {
+  const { organisationId } = req.body;
+
+  DB.get("SELECT organisations.* FROM organisations WHERE organisations.id = ?", organisationId)
+    .then(organisation => {
+      if (!organisation) {
+        throw { statusCode: 404 }
+      }
+
+      return DB.run("UPDATE users SET organisation_id = NULL WHERE id = ?", req.user.id);
+    })
+    .then(() => res.sendStatus(200))
+    .catch(err => {
+      if (err && err.statusCode) {
+        return res.sendStatus(err.statusCode);
+      }
+
+      throw err;
+    });
+});
+
 router.put("/:id", (req, res) => {
   DB.get("SELECT organisations.* FROM organisations WHERE organisations.id = ?", req.params.id)
     .then(organisation => {
