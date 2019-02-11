@@ -1,0 +1,9 @@
+{
+  "name": "adnat-react",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "backend:start": "cd backend && node index.js",
+    "backend:setup": "cd backend && yarn install"
+  }
+}
