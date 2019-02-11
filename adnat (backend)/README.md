@@ -101,7 +101,7 @@ It is possible to build a solution to this challenge without writing a line of J
 * A datepicker for the shift date field
 * Using Ajax to create shifts
 * Sorting by column
-* Making the whole thing an SPA in React
+* [Making the whole thing an SPA in React](https://github.com/TandaHQ/work-samples/tree/master/adnat%20(react))
 
 #### 10. Your own idea
 Feel free to add a feature of your own devising. You're more than welcome to [sign up for a trial Tanda account](https://www.tanda.co/) to look for inspiration.
