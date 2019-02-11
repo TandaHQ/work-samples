@@ -1,6 +1,7 @@
 # Adnat React Challenge
 ## Endpoints
-All requests will need an authorization header with the users session ID
+All requests (except for signup and login) will need an authorization header with the users session ID
+You receive this sessionId after signup or login
 ```javascript
 {
   "Authorization": "52d8e07a-2680-4bc7-b9ed-d5aa8bf69c3b",
