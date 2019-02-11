@@ -69,4 +69,28 @@ router.post("/create_join", (req, res) => {
     });
 });
 
+router.put("/:id", (req, res) => {
+  DB.get("SELECT organisations.* FROM organisations WHERE organisations.id = ?", req.params.id)
+    .then(organisation => {
+      if (!organisation) {
+        throw {statusCode: 404}
+      }
+
+      return DB.run(
+        "UPDATE organisations SET name = ?, hourly_rate = ? WHERE id = ?",
+        req.body.name || organisation.name,
+        req.body.hourlyRate || organisation.hourly_rate,
+        organisation.id
+      );
+    })
+    .then(() => res.sendStatus(200))
+    .catch(err => {
+      if (err && err.statusCode) {
+        return res.sendStatus(err.statusCode);
+      }
+
+      throw err;
+    });
+});
+
 module.exports = router;
