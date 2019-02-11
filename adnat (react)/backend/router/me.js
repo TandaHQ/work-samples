@@ -44,40 +44,22 @@ router.put("/change_password", (req, res) => {
     })
     .then(() => {
       if (newplaintextPassword !== newplaintextPasswordConfirmation) {
-        throw {statusCode: 400};
+        throw { statusCode: 400 };
       }
     })
     .then(() => hashPassword(newplaintextPassword))
     .then(password => {
-      DB.run("UPDATE users SET password = ? WHERE id = ?", password, req.user.id);
+      DB.run(
+        "UPDATE users SET password = ? WHERE id = ?",
+        password,
+        req.user.id
+      );
     })
     .then(() => res.sendStatus(200))
     .catch(err => {
       if (err && err.statusCode) {
         return res.sendStatus(err.statusCode);
       }
-      throw err;
-    });
-});
-
-router.delete("/logout", (req, res) => {
-  DB.get("SELECT * FROM sessions WHERE user_id = ?", req.user.id)
-    .then(session => {
-      if (!session) {
-        throw { statusCode: 404 };
-      }
-
-      return session;
-    })
-    .then(session =>
-      DB.run("DELETE FROM sessions WHERE sessions.session_id = ?", session.session_id)
-    )
-    .then(() => res.sendStatus(200))
-    .catch(err => {
-      if (err && err.statusCode) {
-        return res.sendStatus(err.statusCode);
-      }
-
       throw err;
     });
 });

@@ -3,6 +3,7 @@ const express = require("express");
 const router = express.Router();
 const DB = require("../db");
 const { comparePassword, hashPassword } = require("../util/password");
+const { sessionMiddleware } = require("../util/session");
 
 router.post("/signup", (req, res) => {
   const {
@@ -79,6 +80,35 @@ router.post("/login", (req, res) => {
       if (err && err.statusCode) {
         return res.sendStatus(err.statusCode);
       }
+      throw err;
+    });
+});
+
+router.delete("/logout", sessionMiddleware, (req, res) => {
+  DB.get(
+    "SELECT * FROM sessions WHERE user_id = ? AND session_id = ?",
+    req.user.id,
+    req.headers.authorization
+  )
+    .then(session => {
+      if (!session) {
+        throw { statusCode: 401 };
+      }
+
+      return session;
+    })
+    .then(session =>
+      DB.run(
+        "DELETE FROM sessions WHERE sessions.session_id = ?",
+        session.session_id
+      )
+    )
+    .then(() => res.sendStatus(200))
+    .catch(err => {
+      if (err && err.statusCode) {
+        return res.sendStatus(err.statusCode);
+      }
+
       throw err;
     });
 });

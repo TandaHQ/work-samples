@@ -10,13 +10,14 @@ const hashPassword = plaintext =>
     });
   });
 
-const comparePassword = (plaintext, hash) => new Promise((resolve, reject) => {
-  bcrypt.compare(plaintext, hash, function(err, res) {
-    if (err) {
-      return reject(err);
-    }
-    resolve(res);
+const comparePassword = (plaintext, hash) =>
+  new Promise((resolve, reject) => {
+    bcrypt.compare(plaintext, hash, function(err, res) {
+      if (err) {
+        return reject(err);
+      }
+      resolve(res);
+    });
   });
-});
 
 module.exports = { comparePassword, hashPassword };
