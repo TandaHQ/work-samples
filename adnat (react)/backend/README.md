@@ -281,16 +281,16 @@ If you receive a non-200 response code. There should be a message in the `error`
 ```javascript
 // body
 {
-  "name": "Not Barney", // optional
-  "email": "notbarney@gmail.com" //optional
+  "name": "Not Dave Allie", // optional
+  "email": "notdave@tanda.co" // optional
 }
 
 // response
 {
   "id": 1,
   "organisationId": 1,
-  "name": "Not Barney",
-  "email": "notbarney@gmail.com"
+  "name": "Not Dave Allie",
+  "email": "notdave@tanda.co"
 }
 ```
 
@@ -301,9 +301,9 @@ If you receive a non-200 response code. There should be a message in the `error`
 ```javascript
 // body
 {
-	"oldPassword": "opensesame",
-	"newPassword": "gfdkljdfgdfgjkldfgkljfgljk",
-	"newPasswordConfirmation": "gfdkljdfgdfgjkldfgkljfgljk"
+  "oldPassword": "opensesame",
+  "newPassword": "opensesame123",
+  "newPasswordConfirmation": "opensesame123"
 }
 
 // response
