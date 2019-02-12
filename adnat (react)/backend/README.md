@@ -136,7 +136,7 @@ If you receive a non-200 response code. There should be a message in the `error`
 ```javascript
 // body
 {
-  "name": "New Organisation",
+  "name": "New Organisation", // optional
   "hourlyRate": 34.5 // optional
 }
 
