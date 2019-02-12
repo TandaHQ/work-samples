@@ -66,6 +66,11 @@ If you receive a non-200 response code. There should be a message in the `error`
 
 **`DELETE`**`/auth/logout`
 
+```javascript
+// response
+200
+````
+
 ---
 
 ## Organisations
@@ -92,8 +97,8 @@ If you receive a non-200 response code. There should be a message in the `error`
 ```javascript
 // body
 {
-	"name": "My Organisation",
-	"hourlyRate": 100.12 // optional
+  "name": "My Organisation",
+  "hourlyRate": 100.12
 }
 
 // response
@@ -111,7 +116,7 @@ If you receive a non-200 response code. There should be a message in the `error`
 ```javascript
 // body
 {
-	"organisationId": 1
+  "organisationId": 1
 }
 
 // response
@@ -131,9 +136,12 @@ If you receive a non-200 response code. There should be a message in the `error`
 ```javascript
 // body
 {
-  "name": "New Organisation",
+  "name": "New Organisation", // optional
   "hourlyRate": 34.5 // optional
 }
+
+// response
+200
 ```
 
 ### Leave Organisation
@@ -149,14 +157,14 @@ If you receive a non-200 response code. There should be a message in the `error`
 **`GET`**`/shifts`
 
 ```javascript
-// repsonse
+// response
 [
   {
     id: 1,
     userId: 1,
     start: "2018-01-01 10:15",
     finish: "2018-01-01 10:20",
-    breakLength: null
+    breakLength: 40
   },
   {
     id: 2,
@@ -221,6 +229,11 @@ If you receive a non-200 response code. There should be a message in the `error`
 
 **`DELETE`**`/shifts/:id`
 
+```javascript
+// response
+200
+```
+
 ---
 
 ## Users
@@ -231,12 +244,20 @@ If you receive a non-200 response code. There should be a message in the `error`
 
 ```javascript
 // response
-{
-  "id": 1,
-  "organisationId": 1,
-  "name": "Dave Allie",
-  "email": "dave@tanda.co"
-}
+[
+  {
+    "id": 1,
+    "organisationId": 1,
+    "name": "Dave Allie",
+    "email": "dave@tanda.co"
+  },
+  {
+    "id": 2,
+    "organisationId": 1,
+    "name": "Dan Gilchrist",
+    "email": "dan@tanda.co"
+  }
+];
 ```
 
 ### Get User Information
@@ -260,16 +281,16 @@ If you receive a non-200 response code. There should be a message in the `error`
 ```javascript
 // body
 {
-  "name": "Not Barney", // optional
-  "email": "notbarney@gmail.com" //optional
+  "name": "Not Dave Allie", // optional
+  "email": "notdave@tanda.co" // optional
 }
 
 // response
 {
   "id": 1,
   "organisationId": 1,
-  "name": "Not Barney",
-  "email": "notbarney@gmail.com"
+  "name": "Not Dave Allie",
+  "email": "notdave@tanda.co"
 }
 ```
 
@@ -280,8 +301,11 @@ If you receive a non-200 response code. There should be a message in the `error`
 ```javascript
 // body
 {
-	"oldPassword": "opensesame",
-	"newPassword": "gfdkljdfgdfgjkldfgkljfgljk",
-	"newPasswordConfirmation": "gfdkljdfgdfgjkldfgkljfgljk"
+  "oldPassword": "opensesame",
+  "newPassword": "opensesame123",
+  "newPasswordConfirmation": "opensesame123"
 }
+
+// response
+200
 ```
