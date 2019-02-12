@@ -116,7 +116,7 @@ If you receive a non-200 response code. There should be a message in the `error`
 ```javascript
 // body
 {
-	"organisationId": 1
+  "organisationId": 1
 }
 
 // response
@@ -157,7 +157,7 @@ If you receive a non-200 response code. There should be a message in the `error`
 **`GET`**`/shifts`
 
 ```javascript
-// repsonse
+// response
 [
   {
     id: 1,
