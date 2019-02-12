@@ -66,6 +66,11 @@ If you receive a non-200 response code. There should be a message in the `error`
 
 **`DELETE`**`/auth/logout`
 
+```javascript
+// response
+200
+````
+
 ---
 
 ## Organisations
@@ -134,6 +139,9 @@ If you receive a non-200 response code. There should be a message in the `error`
   "name": "New Organisation",
   "hourlyRate": 34.5 // optional
 }
+
+// response
+200
 ```
 
 ### Leave Organisation
@@ -221,6 +229,11 @@ If you receive a non-200 response code. There should be a message in the `error`
 
 **`DELETE`**`/shifts/:id`
 
+```javascript
+// response
+200
+```
+
 ---
 
 ## Users
@@ -284,4 +297,7 @@ If you receive a non-200 response code. There should be a message in the `error`
 	"newPassword": "gfdkljdfgdfgjkldfgkljfgljk",
 	"newPasswordConfirmation": "gfdkljdfgdfgjkldfgkljfgljk"
 }
+
+// response
+200
 ```
