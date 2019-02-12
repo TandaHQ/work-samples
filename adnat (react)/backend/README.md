@@ -97,8 +97,8 @@ If you receive a non-200 response code. There should be a message in the `error`
 ```javascript
 // body
 {
-	"name": "My Organisation",
-	"hourlyRate": 100.12 // optional
+  "name": "My Organisation",
+  "hourlyRate": 100.12
 }
 
 // response
@@ -164,7 +164,7 @@ If you receive a non-200 response code. There should be a message in the `error`
     userId: 1,
     start: "2018-01-01 10:15",
     finish: "2018-01-01 10:20",
-    breakLength: null
+    breakLength: 40
   },
   {
     id: 2,
