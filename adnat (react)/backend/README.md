@@ -33,6 +33,7 @@ If you receive a non-200 response code. There should be a message in the `error`
 ```javascript
 // body
 {
+  "name": "Barney Rubble",
   "email": "barney@gmail.com",
   "password": "mypassword",
   "passwordConfirmation": "mypassword"
