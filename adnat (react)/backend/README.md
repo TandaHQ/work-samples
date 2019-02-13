@@ -276,7 +276,7 @@ If you receive a non-200 response code. There should be a message in the `error`
 
 ### Update User Details
 
-**`PUT`**`/me/update`
+**`PUT`**`/users/me`
 
 ```javascript
 // body
@@ -296,7 +296,7 @@ If you receive a non-200 response code. There should be a message in the `error`
 
 ### Change Password
 
-**`PUT`**`/me/change_password`
+**`PUT`**`/users/me/change_password`
 
 ```javascript
 // body
