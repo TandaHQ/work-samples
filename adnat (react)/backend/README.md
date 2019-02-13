@@ -229,6 +229,8 @@ If you receive a non-200 response code. There should be a message in the `error`
 
 **`DELETE`**`/shifts/:id`
 
+- `:id` is the ID of the shift to be deleted
+
 ```javascript
 // response
 200
