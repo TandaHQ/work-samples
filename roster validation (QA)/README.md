@@ -15,7 +15,7 @@ You may find the following resources useful for this challenge:
 
 * Sign up for a [free trial](https://my.tanda.co/try) of Tanda.  Please include "(QA Candidate)" or similar in the name of the business so we can distinguish your trial account.  
 * [How To Create a Roster](http://help.tanda.co/get-started-with-tanda/get-started-with-the-setup-checklist/get-started-create-shifts-on-a-roster)
-* [Roster Validation in Tanda](http://help.tanda.co/settings/general-settings/validation-settings)
+* [Roster Validation in Tanda](http://help.tanda.co/settings/general-settings/general-settings-rosters)
 * [Leave and Unavailability on Rosters](http://help.tanda.co/rosters/tell-me-more-about-rosters/unavailability-leave-on-rosters)
 
 ## The Challenge
