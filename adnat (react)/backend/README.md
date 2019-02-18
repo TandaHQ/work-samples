@@ -163,8 +163,8 @@ If you receive a non-200 response code. There should be a message in the `error`
     id: 1,
     userId: 1,
     start: "2018-01-01 10:15",
-    finish: "2018-01-01 10:20",
-    breakLength: 40
+    finish: "2018-01-01 12:20",
+    breakLength: 30
   },
   {
     id: 2,
@@ -187,7 +187,7 @@ If you receive a non-200 response code. There should be a message in the `error`
 {
   "userId": 1,
   "start": "2018-01-01 10:15",
-  "finish": "2018-01-01 10:20",
+  "finish": "2018-01-01 12:20",
   "breakLength": 30 // optional
 }
 
@@ -220,7 +220,7 @@ If you receive a non-200 response code. There should be a message in the `error`
   "id": 3,
   "userId": 1,
   "start": "2018-01-01 11:15", // optional
-  "finish": "2018-01-01 11:20", // optional
+  "finish": "2018-01-01 13:20", // optional
   "breakLength": 10 // optional
 }
 ```
