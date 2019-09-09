@@ -6,10 +6,12 @@ class LogIn extends Component {
     this.state = {
       email: '',
       password: '',
-      userLoggedIn: false
+      userLoggedIn: false,
+      createUser: false
     }
     this.handleLoginSubmit = this.handleLoginSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
+    this.toggleCreateUser = this.toggleCreateUser.bind(this)
   }
 
   handleLoginSubmit(event) {
@@ -19,6 +21,8 @@ class LogIn extends Component {
       password: this.state.password
     }
     this.setState({
+      email: '',
+      password: '',
       userLoggedIn: true
     })
     this.props.handleUserLogin(loginParams)
@@ -30,14 +34,20 @@ class LogIn extends Component {
     })
   }
 
+  toggleCreateUser() {
+    this.setState({
+      createUser: true
+    })
+  }
+
   render () {
     return (
       <React.Fragment>
-      { this.props.userLoggedIn === false
+      { this.state.createUser === false
         ?
           <div className="log-in">
             <h2>Log in</h2>
-            <form onSubmit={this.handleUserLogin}>
+            <form onSubmit={this.handleLoginSubmit}>
               <label htmlFor="email">
                 Email
               </label>
@@ -46,7 +56,7 @@ class LogIn extends Component {
                 type="text"
                 onChange={this.handleChange}
                 value={this.state.email}
-                id="loginEmail"
+                id="email"
               />
               <br />
               <label htmlFor="email">
@@ -62,9 +72,15 @@ class LogIn extends Component {
               <br />
               <button type="submit"> Log in </button>
             </form>
+            <span
+              onClick={this.toggleCreateUser}>
+              Sign up
+            </span>
           </div>
         :
-        <span> </span>
+          <div className="create-user">
+            <h2>Sign up</h2>
+          </div>
       }
       </React.Fragment>
     )
