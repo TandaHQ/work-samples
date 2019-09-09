@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import LogIn from './components/LogIn'
+
 const baseAPI = `http://localhost:3000`
 
 class App extends Component {
@@ -10,11 +12,15 @@ class App extends Component {
       userLoggedIn: false,
       userCreateMessage: '',
       loginError: '',
-      loggedInUser: null
+      loggedInUser: null,
+      allOrganisations: []
     }
 // BINDING
     this.handleCreateUser = this.handleCreateUser.bind(this)
     this.handleUserLogin = this.handleUserLogin.bind(this)
+    this.handleLogOut = this.handleLogOut.bind(this)
+    this.fetchOrganisations = this.fetchOrganisations.bind(this)
+    this.sortOrganisations = this.sortOrganisations.bind(this)
   }
 
 // METHODS
@@ -89,15 +95,32 @@ class App extends Component {
         'Authorization': localStorage.getItem('sessionId')
       }
     })
-    .then(
-      console.log('User logged out!')
-      localStorage.clear()
-      this.setState({
-        userLoggedIn: false,
-        loggedInUser: null,
-        currentUser: null
-      })
-    )
+    console.log('User logged out!')
+    localStorage.clear()
+    this.setState({
+      userLoggedIn: false,
+      loggedInUser: null,
+      currentUser: null
+    })
+  }
+
+  fetchOrganisations() {
+    fetch(baseAPI + `/organisations`)
+    .then(data => data.json())
+    .then(jsonRes => {
+      this.sortOrganisations(jsonRes)
+    })
+    .catch(err => console.log(err))
+  }
+
+  sortOrganisations(organisations) {
+    let allOrganisations = []
+    organisations.forEach( organisation => {
+      if (organisation) {
+        allOrganisations.push(organisation)
+      }
+      this.setState({allOrganisations: allOrganisations})
+    })
   }
 
 // DIDMOUNT
@@ -111,6 +134,10 @@ class App extends Component {
     return (
       <div className="app-container">
         <h1> Tanda. </h1>
+        <LogIn
+          userLoggedIn={this.state.userLoggedIn}
+          handleUserLogin={this.handleUserLogin}
+        />
       </div>
     )
   }
