@@ -9,8 +9,12 @@ class App extends Component {
       currentUser: '',
       userLoggedIn: false
     }
+// BINDING
     this.handleCreateUser = this.handleCreateUser.bind(this)
+    this.handleUserLogin = this.handleUserLogin.bind(this)
   }
+
+// METHODS
 
   handleCreateUser(user) {
     console.log(user)
@@ -19,6 +23,7 @@ class App extends Component {
       method: 'POST',
       headers: {
         'Accept': 'application/json, text/plain, */*',
+        "Authorization": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         'Content-Type': 'application/json'
       }
     })
@@ -39,6 +44,46 @@ class App extends Component {
     })
   }
 
+  handleUserLogin(user) {
+    fetch(baseAPI + `/auth/login`, {
+      method: 'POST',
+      body: JSON.stringify({user: user}),
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        "Authorization": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(loginRes => loginRes.json())
+      .then(jsonLogin => {
+        console.log(jsonLogin)
+        if(!jsonLogin.error) {
+          this.setState({
+            loggedInUser: jsonLogin.user.name,
+            userCreateMessage: '',
+            loginError: '',
+            userLoggedIn: true,
+            currentUser: jsonLogin.user
+          })
+        }
+        else {
+          console.log(jsonLogin.error)
+          this.setState({
+            loginError: jsonLogin.error,
+            userCreateMessage: '',
+            userLoggedIn: false
+          })
+        }
+      })
+  }
+
+// DIDMOUNT
+  componentDidMount() {
+
+  }
+
+// RENDER
+
   render() {
     return (
       <div className="app-container">
@@ -48,4 +93,5 @@ class App extends Component {
   }
 }
 
+// EXPORT
 export default App;
