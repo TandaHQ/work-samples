@@ -6,8 +6,11 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      currentUser: '',
-      userLoggedIn: false
+      currentUser: null,
+      userLoggedIn: false,
+      userCreateMessage: '',
+      loginError: '',
+      loggedInUser: null
     }
 // BINDING
     this.handleCreateUser = this.handleCreateUser.bind(this)
@@ -15,7 +18,6 @@ class App extends Component {
   }
 
 // METHODS
-
   handleCreateUser(user) {
     console.log(user)
     fetch(baseAPI + `/auth/signup`, {
@@ -23,7 +25,6 @@ class App extends Component {
       method: 'POST',
       headers: {
         'Accept': 'application/json, text/plain, */*',
-        "Authorization": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         'Content-Type': 'application/json'
       }
     })
@@ -50,7 +51,6 @@ class App extends Component {
       body: JSON.stringify({user: user}),
       headers: {
         'Accept': 'application/json, text/plain, */*',
-        "Authorization": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         'Content-Type': 'application/json'
       }
     })
@@ -58,6 +58,8 @@ class App extends Component {
       .then(jsonLogin => {
         console.log(jsonLogin)
         if(!jsonLogin.error) {
+          localStorage.setItem('sessionId', jsonLogin.sessionId)
+          console.log(jsonLogin.sessionId)
           this.setState({
             loggedInUser: jsonLogin.user.name,
             userCreateMessage: '',
@@ -75,6 +77,27 @@ class App extends Component {
           })
         }
       })
+  }
+
+  handleLogOut(user) {
+    fetch(baseAPI + `/auth/logout`, {
+      method: 'DELETE',
+      body: JSON.stringify({user: user}),
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json',
+        'Authorization': localStorage.getItem('sessionId')
+      }
+    })
+    .then(
+      console.log('User logged out!')
+      localStorage.clear()
+      this.setState({
+        userLoggedIn: false,
+        loggedInUser: null,
+        currentUser: null
+      })
+    )
   }
 
 // DIDMOUNT
