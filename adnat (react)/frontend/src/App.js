@@ -57,7 +57,7 @@ class App extends Component {
       body: JSON.stringify({user: user}),
       headers: {
         'Accept': 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
+        // 'Content-Type': 'application/json'
       }
     })
       .then(loginRes => loginRes.json())

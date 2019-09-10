@@ -4,6 +4,7 @@ const router = express.Router();
 const DB = require("../db");
 const { comparePassword, hashPassword } = require("../util/password");
 const { sessionMiddleware } = require("../util/session");
+const cors = require('cors');
 
 router.post("/signup", (req, res) => {
   const {
@@ -56,7 +57,7 @@ router.post("/signup", (req, res) => {
     });
 });
 
-router.post("/login", (req, res) => {
+router.post("/login", cors(), (req, res) => {
   const { email, password: plaintextPassword } = req.body;
   const sessionId = uuidv4();
 

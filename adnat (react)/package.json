@@ -5,5 +5,8 @@
   "scripts": {
     "backend:start": "cd backend && node index.js",
     "backend:setup": "cd backend && yarn install"
+  },
+  "dependencies": {
+    "cors": "^2.8.5"
   }
 }

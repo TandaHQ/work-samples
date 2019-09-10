@@ -5,12 +5,14 @@ const organisationsRouter = require("./router/organisations");
 const shiftsRouter = require("./router/shifts");
 const usersRouter = require("./router/users");
 const app = express();
+const cors = require('cors');
 
 app.use(bodyParser.json());
 app.use("/auth", authRouter);
 app.use("/organisations", organisationsRouter);
 app.use("/shifts", shiftsRouter);
 app.use("/users", usersRouter);
+app.use(cors());
 
 app.listen(3000, () => {
   console.log("Server running on port 3000");
