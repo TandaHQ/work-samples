@@ -6,6 +6,17 @@ const { comparePassword, hashPassword } = require("../util/password");
 const { sessionMiddleware } = require("../util/session");
 const cors = require('cors');
 
+var whitelist = ['http://localhost:3001', 'http://localhost:3000']
+var corsOptions = {
+  origin: function(origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}
+
 router.post("/signup", (req, res) => {
   const {
     name,
@@ -57,7 +68,7 @@ router.post("/signup", (req, res) => {
     });
 });
 
-router.post("/login", cors(), (req, res) => {
+router.post("/login", cors(corsOptions), (req, res) => {
   const { email, password: plaintextPassword } = req.body;
   const sessionId = uuidv4();
 

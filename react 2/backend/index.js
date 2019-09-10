@@ -7,6 +7,19 @@ const usersRouter = require("./router/users");
 const app = express();
 const cors = require('cors');
 
+const whitelist = ['http://localhost:3001']
+const corsOptions = {
+  origin: function(origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}
+
+app.options('*', cors())
+
 app.use(bodyParser.json());
 app.use("/auth", authRouter);
 app.use("/organisations", organisationsRouter);
