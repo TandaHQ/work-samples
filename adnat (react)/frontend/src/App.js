@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import LogIn from './components/LogIn'
+import Home from './components/Home'
 
 const baseAPI = `http://localhost:3000`
 
@@ -29,6 +30,7 @@ class App extends Component {
     fetch(baseAPI + `/auth/signup`, {
       body: JSON.stringify({user:user}),
       method: 'POST',
+      // mode: 'no-cors',
       headers: {
         'Accept': 'application/json, text/plain, */*',
         'Content-Type': 'application/json'
@@ -52,10 +54,12 @@ class App extends Component {
   }
 
   handleUserLogin(user) {
+    console.log(user)
     fetch(baseAPI + `/auth/login`, {
       method: 'POST',
       body: JSON.stringify({user: user}),
       headers: {
+        "Access-Control-Allow-Origin": "*",
         'Accept': 'application/json, text/plain, */*',
         'Content-Type': 'application/json'
       }
@@ -88,6 +92,7 @@ class App extends Component {
   handleLogOut(user) {
     fetch(baseAPI + `/auth/logout`, {
       method: 'DELETE',
+      mode: 'no-cors',
       body: JSON.stringify({user: user}),
       headers: {
         'Accept': 'application/json, text/plain, */*',
@@ -105,7 +110,9 @@ class App extends Component {
   }
 
   fetchOrganisations() {
-    fetch(baseAPI + `/organisations`)
+    fetch(baseAPI + `/organisations`, {
+      mode: 'no-cors'
+    })
     .then(data => data.json())
     .then(jsonRes => {
       this.sortOrganisations(jsonRes)
@@ -125,7 +132,7 @@ class App extends Component {
 
 // DIDMOUNT
   componentDidMount() {
-
+    // this.fetchOrganisations()
   }
 
 // RENDER
@@ -134,10 +141,20 @@ class App extends Component {
     return (
       <div className="app-container">
         <h1> Tanda. </h1>
-        <LogIn
-          userLoggedIn={this.state.userLoggedIn}
-          handleUserLogin={this.handleUserLogin}
-        />
+        <React.Fragment>
+        { this.state.userLoggedIn === false
+          ?
+          <LogIn
+            userLoggedIn={this.state.userLoggedIn}
+            handleUserLogin={this.handleUserLogin}
+            handleCreateUser={this.handleCreateUser}
+          />
+        :
+          <Home
+
+          />
+        }
+        </React.Fragment>
       </div>
     )
   }
