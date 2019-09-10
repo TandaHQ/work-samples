@@ -27,7 +27,7 @@ class App extends Component {
   handleCreateUser(user) {
     console.log(user)
     fetch(baseAPI + `/auth/signup`, {
-      body: JSON.stringify({user:user}),
+      // body: JSON.stringify({user:user}),
       method: 'POST',
       headers: {
         'Accept': 'application/json, text/plain, */*',
@@ -137,6 +137,9 @@ class App extends Component {
         <LogIn
           userLoggedIn={this.state.userLoggedIn}
           handleUserLogin={this.handleUserLogin}
+          loginError={this.state.loginError}
+          userCreateMessage={this.state.userCreateMessage}
+          handleCreateUser={this.handleCreateUser}
         />
       </div>
     )

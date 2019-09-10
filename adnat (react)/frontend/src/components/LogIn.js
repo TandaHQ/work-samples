@@ -7,7 +7,11 @@ class LogIn extends Component {
       email: '',
       password: '',
       userLoggedIn: false,
-      createUser: false
+      createUser: false,
+      name: '',
+      createEmail: '',
+      createPassword: '',
+      confirmPassword: ''
     }
     this.handleLoginSubmit = this.handleLoginSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
@@ -36,7 +40,7 @@ class LogIn extends Component {
 
   toggleCreateUser() {
     this.setState({
-      createUser: true
+      createUser: !this.state.createUser
     })
   }
 
@@ -47,6 +51,7 @@ class LogIn extends Component {
         ?
           <div className="log-in">
             <h2>Log in</h2>
+            <h5>{this.props.loginError}</h5>
             <form onSubmit={this.handleLoginSubmit}>
               <label htmlFor="email">
                 Email
@@ -80,6 +85,58 @@ class LogIn extends Component {
         :
           <div className="create-user">
             <h2>Sign up</h2>
+            <h4>{this.props.userCreateMessage}</h4>
+            <form onSubmit={this.props.handleCreateUser}>
+              <label htmlFor="name">
+                Name
+              </label>
+              <br />
+              <input
+                type="text"
+                onChange={this.handleChange}
+                value={this.state.name}
+                id="name"
+              />
+              <br />
+              <label htmlFor="createEmail">
+                Email
+              </label>
+              <br />
+              <input
+                type="text"
+                onChange={this.handleChange}
+                value={this.state.createEmail}
+                id="createEmail"
+              />
+              <br />
+              <label htmlFor="createPassword">
+                Password <br />
+                <i>(6 characters minimum)</i> <br />
+              </label>
+              <input
+                type="password"
+                onChange={this.handleChange}
+                value={this.state.createPassword}
+                id="createPassword"
+              />
+              <br />
+              <label htmlFor="confirmPassword">
+                Password confirmation
+              </label>
+              <br />
+              <input
+                type="password"
+                onChange={this.handleChange}
+                value={this.state.confirmPassword}
+                id="confirmPassword"
+              />
+              <br />
+              <button type="submit"> Sign up </button>
+            </form>
+            <span
+              onClick={this.toggleCreateUser}>
+              Log In
+            </span>
           </div>
       }
       </React.Fragment>
