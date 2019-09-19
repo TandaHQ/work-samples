@@ -105,11 +105,20 @@ class App extends Component {
   }
 
   fetchOrganisations() {
+    // fetch(baseAPI + `/organisations`, {
+    //   method: 'GET',
+    //   body: JSON.stringify({user: user}),
+    //   headers: {
+    //     'Accept': 'application/json, text/plain, */*',
+    //     'Content-Type': 'application/json',
+    //     'Authorization': localStorage.getItem('sessionId')
+    //   }
+    // })
     fetch(baseAPI + `/organisations`)
     .then(data => data.json())
-    .then(jsonRes => {
-      this.sortOrganisations(jsonRes)
-    })
+    // .then(jsonRes => {
+    //   this.sortOrganisations(jsonRes)
+    // })
     .catch(err => console.log(err))
   }
 
@@ -125,7 +134,7 @@ class App extends Component {
 
 // DIDMOUNT
   componentDidMount() {
-
+    // fetchOrganisations()
   }
 
 // RENDER
@@ -140,6 +149,7 @@ class App extends Component {
           loginError={this.state.loginError}
           userCreateMessage={this.state.userCreateMessage}
           handleCreateUser={this.handleCreateUser}
+          // fetchOrganisations={this.fetchOrganisations}
         />
       </div>
     )
