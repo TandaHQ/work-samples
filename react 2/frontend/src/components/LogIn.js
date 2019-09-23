@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
-const baseAPI = 'http://localhost:3000'
+// const baseAPI = 'http://localhost:3000'
 // const proxyURL = `https://cors-anywhere.herokuapp.com/`
 
 class LogIn extends Component {
@@ -13,7 +13,7 @@ class LogIn extends Component {
 
   handleSubmit(event) {
     event.preventDefault()
-    axios.post(baseAPI + `/auth/login`, {
+    axios.post(`/auth/login`, {
       email: event.target.email.value,
       password: event.target.password.value
     })

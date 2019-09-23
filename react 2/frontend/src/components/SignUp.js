@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
+// import axios from 'axios'
 
-const baseAPI = `http://localhost:3000`
+// const baseAPI = `http://localhost:3000`
 
 class SignUp extends Component {
   constructor(props) {
