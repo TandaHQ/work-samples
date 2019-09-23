@@ -26,7 +26,7 @@ class App extends Component {
 // METHODS
   handleCreateUser(user) {
     console.log(user)
-    fetch(baseAPI + `/auth/signup`, {
+    fetch(`/auth/signup`, {
       // body: JSON.stringify({user:user}),
       method: 'POST',
       headers: {
@@ -52,7 +52,7 @@ class App extends Component {
   }
 
   handleUserLogin(user) {
-    fetch(baseAPI + `/auth/login`, {
+    fetch(`/auth/login`, {
       method: 'POST',
       body: JSON.stringify({user: user}),
       headers: {
