@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 // const baseAPI = 'http://localhost:3000'
-// const proxyURL = `https://cors-anywhere.herokuapp.com/`
 
 class LogIn extends Component {
   constructor(props) {
