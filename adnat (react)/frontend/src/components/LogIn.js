@@ -3,34 +3,53 @@ import React, { Component } from 'react'
 class LogIn extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      email: '',
-      password: '',
-      userLoggedIn: false,
-      createUser: false,
-      name: '',
-      createEmail: '',
-      createPassword: '',
-      confirmPassword: ''
-    }
+    // this.state = {
+    //   email: '',
+    //   password: '',
+    //   userLoggedIn: false,
+    //   createUser: false,
+    //   name: '',
+    //   createEmail: '',
+    //   createPassword: '',
+    //   confirmPassword: ''
+    // }
     this.handleLoginSubmit = this.handleLoginSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
     this.toggleCreateUser = this.toggleCreateUser.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  handleLoginSubmit(event) {
+  handleSubmit(event) {
     event.preventDefault()
-    let loginParams = {
-      email: this.state.email,
-      password: this.state.password
-    }
-    this.setState({
-      email: '',
-      password: '',
-      userLoggedIn: true
+    fetch(`/auth/login`, {
+      method: 'POST',
+      body: {
+        email: event.target.email.value,
+        password: event.target.password.value
+      },
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
     })
-    this.props.handleUserLogin(loginParams)
+    .then(response => {
+      console.log(response)
+    })
   }
+
+  // handleLoginSubmit(event) {
+  //   event.preventDefault()
+  //   let loginParams = {
+  //     email: this.state.email,
+  //     password: this.state.password
+  //   }
+  //   this.setState({
+  //     email: '',
+  //     password: '',
+  //     userLoggedIn: true
+  //   })
+  //   this.props.handleUserLogin(loginParams)
+  // }
 
   handleChange(event) {
     this.setState({
@@ -52,7 +71,7 @@ class LogIn extends Component {
           <div className="log-in">
             <h2>Log in</h2>
             <h5>{this.props.loginError}</h5>
-            <form onSubmit={this.handleLoginSubmit}>
+            <form onSubmit={this.handleSubmit}>
               <label htmlFor="email">
                 Email
               </label>

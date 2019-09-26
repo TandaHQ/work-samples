@@ -17,7 +17,7 @@ class App extends Component {
     }
 // BINDING
     this.handleCreateUser = this.handleCreateUser.bind(this)
-    this.handleUserLogin = this.handleUserLogin.bind(this)
+    // this.handleUserLogin = this.handleUserLogin.bind(this)
     this.handleLogOut = this.handleLogOut.bind(this)
     this.fetchOrganisations = this.fetchOrganisations.bind(this)
     this.sortOrganisations = this.sortOrganisations.bind(this)
@@ -51,39 +51,39 @@ class App extends Component {
     })
   }
 
-  handleUserLogin(user) {
-    fetch(`/auth/login`, {
-      method: 'POST',
-      body: JSON.stringify({user: user}),
-      headers: {
-        'Accept': 'application/json, text/plain, */*',
-        // 'Content-Type': 'application/json'
-      }
-    })
-      .then(loginRes => loginRes.json())
-      .then(jsonLogin => {
-        console.log(jsonLogin)
-        if(!jsonLogin.error) {
-          localStorage.setItem('sessionId', jsonLogin.sessionId)
-          console.log(jsonLogin.sessionId)
-          this.setState({
-            loggedInUser: jsonLogin.user.name,
-            userCreateMessage: '',
-            loginError: '',
-            userLoggedIn: true,
-            currentUser: jsonLogin.user
-          })
-        }
-        else {
-          console.log(jsonLogin.error)
-          this.setState({
-            loginError: jsonLogin.error,
-            userCreateMessage: '',
-            userLoggedIn: false
-          })
-        }
-      })
-  }
+  // handleUserLogin(user) {
+  //   fetch(`/auth/login`, {
+  //     method: 'POST',
+  //     body: JSON.stringify({user: user}),
+  //     headers: {
+  //       'Accept': 'application/json, text/plain, */*',
+  //       // 'Content-Type': 'application/json'
+  //     }
+  //   })
+  //     .then(loginRes => loginRes.json())
+  //     .then(jsonLogin => {
+  //       console.log(jsonLogin)
+  //       if(!jsonLogin.error) {
+  //         localStorage.setItem('sessionId', jsonLogin.sessionId)
+  //         console.log(jsonLogin.sessionId)
+  //         this.setState({
+  //           loggedInUser: jsonLogin.user.name,
+  //           userCreateMessage: '',
+  //           loginError: '',
+  //           userLoggedIn: true,
+  //           currentUser: jsonLogin.user
+  //         })
+  //       }
+  //       else {
+  //         console.log(jsonLogin.error)
+  //         this.setState({
+  //           loginError: jsonLogin.error,
+  //           userCreateMessage: '',
+  //           userLoggedIn: false
+  //         })
+  //       }
+  //     })
+  // }
 
   handleLogOut(user) {
     fetch(baseAPI + `/auth/logout`, {
