@@ -44,6 +44,13 @@ Figure 6:
 
 Leaving an organisation should return the user to the state they are in just after they sign up, i.e. not belonging to any organisations.
 
+Note: The reader has two options for how to handle the shifts of a user who no longer works for an organisation.
+
+* First Option (Preferred): Have a way of the shift still existing, and being joined to the user who no longer sees it since they have "left" the organisation. (This way the employer would still have a record of the shift even after the employee moves on.)
+* Second Option: Delete the shifts of the user who is no longer apart of the organisation.
+
+
+
 Finally, the shift page should show all shifts that belong to the user and their fellow employees at their organisation.
 
 Figure 7:
