@@ -4,7 +4,7 @@ At Tanda, we maintain a number of templates for [Modern Awards](https://www.fair
 
 As an example, the [Clerks - Private Sector Award 2020](http://awardviewer.fwo.gov.au/award/show/MA000002#P413_32840), has 10 different employment levels,
 
-![Wage Levels](https://github.com/TandaHQ/work-samples/blob/add-compliance-tech-challenge/compliance/Clerks%20Age-Based%20Percentages.png)
+![Wage Levels](https://github.com/TandaHQ/work-samples/blob/add-compliance-tech-challenge/compliance/Clerks%20Wage%20Levels.png)
 
 which can be adjusted by any of the 7 age-based percentages.
 
