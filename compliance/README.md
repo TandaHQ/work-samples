@@ -20,3 +20,5 @@ For this challenge, your goal is to write a Ruby (or Ruby on Rails) method which
  
  **Bonus Challenge**
   - use a type system such as [Sorbet](https://sorbet.org/) to explain how you would strongly type your method.  
+  
+Submissions: create your method as a gist and return via email to whoever sent you this challenge.  
