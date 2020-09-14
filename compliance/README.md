@@ -1,6 +1,6 @@
 # Compliance Automation Engineer Challenge
 
-At Tanda, we maintain a number of templates for [Modern Awards](https://www.fairwork.gov.au/awards-and-agreements/awards/list-of-awards) which our customers can apply automate their timesheet calculations. A key part of maintaining these templates is documenting the miniminum wages that can be paid as part of these awards, as well as any age-based adjustments to these.  
+At Tanda, we maintain a number of templates for [Modern Awards](https://www.fairwork.gov.au/awards-and-agreements/awards/list-of-awards) which our customers can apply to automate their timesheet calculations. A key part of maintaining these templates is documenting the miniminum wages that can be paid as part of these awards, as well as any age-based adjustments to these.  
 
 As an example, the [Clerks - Private Sector Award 2020](http://awardviewer.fwo.gov.au/award/show/MA000002#P413_32840), has 10 different employment levels,
 
