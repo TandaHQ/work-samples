@@ -97,8 +97,8 @@ People often take more than one break when they work. For this exercise, instead
 #### 8. Multiple organisations (tricky)
 Some people have 2+ jobs. Extend organisation functionality to allow users to belong to more than one organisation. You will need to rethink the shifts model. Shifts currently belong to a user (who belongs to a single organisation). If there are multiple organisations involved, this falls apart, because you don't know which organisation the user worked the shift at.
 
-#### 9. Unit tests
-Unit tests are a good idea. We don't mandate that you write any for this challenge, but feel free to go ahead and write some tests for your code.
+#### 9. Functional or Unit tests
+Adding tests is a good idea. We don't mandate that you write any for this challenge, but feel free to go ahead and write some tests for your code.
 
 #### 10. JavaScript enhancements
 It is possible to build a solution to this challenge without writing a line of JS. However, a solution that used some would be more exciting. Here are some ideas:
