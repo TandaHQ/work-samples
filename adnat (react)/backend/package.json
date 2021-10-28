@@ -5,8 +5,9 @@
   "dependencies": {
     "bcrypt": "^5.0.0",
     "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
-    "sqlite3": "^4.1.0",
+    "sqlite3": "^5.0.0",
     "uuid": "^3.3.2"
   },
   "scripts": {
