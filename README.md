@@ -1,15 +1,15 @@
-> **Want to work at Tanda? Do one of these challenges and email it to developers@tanda.co**!
+> **Want to work at Tanda / Workforce.com? Do one of these challenges and email it to developers@tanda.co**!
 
-Tanda Code Challenges
+Tanda & Workforce.com Code Challenges
 =================================
 
-Welcome to the Tanda Code Challenges! If you've been sent this link, it's because we are keen to see your programming or design skills in action. (If you've stumbled across this repo, we're also keen to see your skills in action - feel free to have a go at the challenges!)
+Welcome to our Code Challenges! If you've been sent this link, it's because we are keen to see your programming or design skills in action. (If you've stumbled across this repo, we're also keen to see your skills in action - have a go at a challenges!)
 
-Each challenge will have more information about how to complete the challenge, and how to submit them when you're done. If you get stuck at
-any stage, please ask! If you've been chatting to someone from Tanda, email them back, otherwise just send an email to developers@tanda.co
+Each challenge will have more information about how to complete it, and how to submit when you're done. If you get stuck at
+any stage, please ask! If you've been chatting to someone from our team, email them back, otherwise just send an email to developers@tanda.co
 and we'll be happy to help you out.
 
-By the way, if you find any bugs or things you think could be improved in these challenges, please submit a pull request :)
+By the way, if you find any bugs or things you think could be improved in these challenges, make a pull request :)
 
 ## Why does this exist?
 
