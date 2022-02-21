@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+	<head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body>
+	  <div class="flex flex-col flex-grow h-full">
+	  	<!- 
+	  	  IRL we use the google maps API to render a map with the users location.
+	  	  The location is saved to the DB, so managers can verify the employee is on site.
+	  	  For this challenge we've put a placeholder map image in there.
+	    --> 
+	  	<div id="map" class="h-96 bg-cover bg-center" style="background-image: url('https://snazzy-maps-cdn.azureedge.net/assets/8097-wy.png?v=20170626083314")></div>
+	  	<div class="px-4 py-5">
+	  	  <div id="clocked-out">
+				  <h1 class="text-3xl font-bold text-red-600">
+				    Clocked out content
+				  </h1>
+				</div>
+				<div id="clocked-in" class="hidden">
+					<h1 class="text-3xl font-bold text-blue-600">
+				    Clocked in content
+				  </h1>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
