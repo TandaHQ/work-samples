@@ -2,7 +2,7 @@
 
 For this challenge you will be creating highly simplified version of the Tanda web app from scratch using [Ruby on Rails](https://rubyonrails.org/). This is a Ruby on Rails challenge, so you don't need to worry about design too much. You should use Git as you build your solution. For submission you are asked to push your repo to GitHub and provide us with the link and any necessary instructions.
 
-It is recommended to use Ruby on Rails (.erb / .haml) when building out the front-end for your project, as that's what we use at Workforce.com, but using a different framework like React or Vue is also allowed.
+It is recommended to use Ruby on Rails (.erb / .haml for the view files) (https://guides.rubyonrails.org/layouts_and_rendering.html) when building out the front-end for your project, but using a different framework like React or Vue is also allowed.
 
 Please also provide a README file with the instructions needed to clone your project, install any dependencies, and run the app.
 
