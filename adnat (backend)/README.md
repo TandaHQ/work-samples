@@ -2,6 +2,12 @@
 
 For this challenge you will be creating highly simplified version of the Tanda web app from scratch using [Ruby on Rails](https://rubyonrails.org/). This is a Ruby on Rails challenge, so you don't need to worry about design too much. You should use Git as you build your solution. For submission you are asked to push your repo to GitHub and provide us with the link and any necessary instructions.
 
+It is recommended to use Ruby on Rails (.erb / .haml) when building out the front-end for your project, as that's what we use at Workforce.com, but using a different framework like React or Vue is also allowed.
+
+Please also provide a README file with the instructions needed to clone your project, install any dependencies, and run the app.
+
+
+
 Your app is to have three models: users, organisations, and shifts. Your database should closely resemble the following [entity-relationship diagram](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model#Crow's_foot_notation):
 
 Figure 1:
@@ -105,7 +111,6 @@ It is possible to build a solution to this challenge without writing a line of J
 * A datepicker for the shift date field
 * Using Ajax to create shifts
 * Sorting by column
-* [Making the whole thing an SPA in React](https://github.com/TandaHQ/work-samples/tree/master/adnat%20(react))
 
 #### 11. Your own idea
 Feel free to add a feature of your own devising. You're more than welcome to [sign up for a trial Tanda account](https://www.tanda.co/) to look for inspiration.
