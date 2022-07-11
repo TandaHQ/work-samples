@@ -2,7 +2,7 @@
 
 For this challenge you will be creating highly simplified version of the Tanda web app from scratch using [Ruby on Rails](https://rubyonrails.org/). This is a Ruby on Rails challenge, so you don't need to worry about design too much. You should use Git as you build your solution. For submission you are asked to push your repo to GitHub and provide us with the link and any necessary instructions.
 
-It is recommended to use Ruby on Rails (.erb / .haml for the view files) (https://guides.rubyonrails.org/layouts_and_rendering.html) when building out the front-end for your project, but using a different framework like React or Vue is also allowed.
+It is recommended to use Ruby on Rails (.erb / .haml for the view files) (https://guides.rubyonrails.org/layouts_and_rendering.html) when building out the front-end for your project, but using a different framework like React or Vue is also allowed. Experimenting with Hotwire on Rails is also very much recommended (see the "Optional exercises" section).
 
 Please also provide a README file with the instructions needed to clone your project, install any dependencies, and run the app.
 
@@ -104,7 +104,7 @@ People often take more than one break when they work. For this exercise, instead
 Some people have 2+ jobs. Extend organisation functionality to allow users to belong to more than one organisation. You will need to rethink the shifts model. Shifts currently belong to a user (who belongs to a single organisation). If there are multiple organisations involved, this falls apart, because you don't know which organisation the user worked the shift at.
 
 #### 9. Hotwire on Rails (tricky)
-Hotwire is a Ruby on Rails front-end framework that allows for partial page reloads, handling front-end user actions on the DOM, and much more. You can learn more about it here: https://hotwired.dev/. Experiment with the framework and see if you can add a turbo frame or a Stimulus controller to your project!
+Hotwire is a Ruby on Rails front-end framework that allows for partial page reloads, handling of front-end DOM actions, and much more. You can learn more about it here: https://hotwired.dev/. Experiment with the framework and see if you can add a turbo frame or a Stimulus controller to your project!
 
 #### 10. Functional or Unit tests
 Adding tests is a good idea. We don't mandate that you write any for this challenge, but feel free to go ahead and write some tests for your code.
