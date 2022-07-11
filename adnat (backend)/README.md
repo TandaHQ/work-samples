@@ -103,16 +103,19 @@ People often take more than one break when they work. For this exercise, instead
 #### 8. Multiple organisations (tricky)
 Some people have 2+ jobs. Extend organisation functionality to allow users to belong to more than one organisation. You will need to rethink the shifts model. Shifts currently belong to a user (who belongs to a single organisation). If there are multiple organisations involved, this falls apart, because you don't know which organisation the user worked the shift at.
 
-#### 9. Functional or Unit tests
+#### 9. Hotwire on Rails (tricky)
+Hotwire is a Ruby on Rails front-end framework that allows for partial page reloads, handling front-end user actions on the DOM, and much more. You can learn more about it here: https://hotwired.dev/. Experiment with the framework and see if you can add a turbo frame or a Stimulus controller to your project!
+
+#### 10. Functional or Unit tests
 Adding tests is a good idea. We don't mandate that you write any for this challenge, but feel free to go ahead and write some tests for your code.
 
-#### 10. JavaScript enhancements
+#### 11. JavaScript enhancements
 It is possible to build a solution to this challenge without writing a line of JS. However, a solution that used some would be more exciting. Here are some ideas:
 * A datepicker for the shift date field
 * Using Ajax to create shifts
 * Sorting by column
 
-#### 11. Your own idea
+#### 12. Your own idea
 Feel free to add a feature of your own devising. You're more than welcome to [sign up for a trial Tanda account](https://www.tanda.co/) to look for inspiration.
 
 You will be judged on the the appropriate use of database constraints, your choice of data types, working data validation, the general quality of your Ruby code, and how closely your solution matches this spec. Be a show off! Impress us with your strong command of relational databases and idiomatic Ruby on Rails.
