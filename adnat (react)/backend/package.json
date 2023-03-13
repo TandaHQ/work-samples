@@ -7,7 +7,7 @@
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "express": "^4.17.3",
-    "sqlite3": "^5.0.0",
+    "sqlite3": "^5.1.5",
     "uuid": "^3.3.2"
   },
   "scripts": {
